@@ -27,6 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 STRIPE_KEY =env('STRIPE_KEY')
+STRIPE_PK = env('STRIPE_PK')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

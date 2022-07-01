@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid mt-2">
+    <div class="card col-md-8">
+        <h4 class="card-header center">Profile Information</h4>
+        <div class="card-body">
+            <img src="" alt="Profile Image">
+            <p>Username : {{ request.user.username }}</p>
+            <p>Phone : {{ customer.phone }}</p>
+            <p>Ref Id : {{ customer.ref_id }}</p>
+            <button class="btn btn-success">Edit</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

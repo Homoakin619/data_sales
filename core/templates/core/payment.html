@@ -1,6 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
+this key = {{ stripe }}
 <h4>Payment </h4>
 
 <form method="post" id="payment-form">
@@ -23,13 +24,15 @@
   <button>Submit Payment</button>
 </form>
 
+
+
 {% endblock %}
 
 {% block script %} 
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
-    var stripe = Stripe('pk_test_51JT3LxBgLutrYQFgBHuOw7BYhx9DxxQ7otBZd0s7dL1wOnRQGoCeK8TfeNWEXMnPJx0SbftKBEdStQPJhbuWPng500lUxne2iM');
+    var stripe = Stripe('{{ stripe }}');
     var elements = stripe.elements();
 
 </script>

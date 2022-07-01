@@ -30,7 +30,7 @@ def get_price(network,value):
         # print(glo[value])
         return glo[value]
 
-class IndexView(generic.View):
+class RegisterView(generic.View):
     template_name = 'core/index.html'
     def get (self, *args, **kwargs):
         if self.request.user.is_authenticated:
@@ -52,15 +52,23 @@ class IndexView(generic.View):
             return HttpResponseRedirect('dashboard')
         return render(self.request,self.template_name,context={'form':form})
 
+class ProfileView(generic.View):
+    template_name = 'core/profile.html'
+    def get(self,*args,**kwargs):
+        context = {}
+        context['customer'] = Customer.objects.get(user=self.request.user)
+        return render(self.request,self.template_name,context=context)
+
 class DashboardView(generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
         user = self.request.user
+        
         context ={ }
         if user.is_authenticated:
             customer = Customer.objects.get(user=user)
             context['balance']=customer.balance
-        context['stripe'] = settings.STRIPE_KEY
+        context['stripe'] = settings.STRIPE_PK
         context['items']=Item.objects.all()
         return render(self.request,self.template_name,context=context)
 
@@ -104,38 +112,13 @@ class DashboardView(generic.View):
         except stripe.error.StripeError as e:
         # Display a very generic error to the user, and maybe send
         # yourself an email
+        #     messages.error(self.request,'Your PIN is incorrect!')
             raise ValidationError(e)
         except Exception as e:
         # Something else happened, completely unrelated to Stripe
             raise ValidationError(e)
-       
+        print(charge.id)
         return HttpResponseRedirect(reverse('success'))
-        # pin = int(self.request.POST.get('pin'))
-        # quantity = self.request.POST.get('price')
-        # user = self.request.user
-        # customer = Customer.objects.get(user=user)
-        # customer_pin = customer.pin
-        # balance = customer.balance
-        # network = self.request.POST['network']
-        # price = get_price(network,quantity)
-        # print(price)
-        # if pin == customer_pin:
-        #     if price < balance:
-        #         customer.balance = balance - price
-        #         customer.save()
-        #         messages.success(self.request,'Purchase succesful, you will be credited soon')
-        #         return HttpResponseRedirect(reverse('success'))
-        #     else:
-        #         messages.error(self.request,'You do not have sufficient balance kindly credit your account')
-        #         return HttpResponseRedirect(reverse('transact'))
-        # else:
-        #     messages.error(self.request,'Your PIN is incorrect!')
-        # return self.get(*args,**kwargs)
-
-        
-        # if network:
-        #     return HttpResponseRedirect(reverse('success'))
-        # return self.get(*args,**kwargs)
 
 
 class TransactionView(generic.View):
@@ -148,14 +131,7 @@ class TransactionView(generic.View):
             metadata={'integration_check': 'accept_a_payment'},
             )
         context = {'client_secret':intent.client_secret }
-        # if Cart.objects.all().count():
-        #     Cart.objects.all().delete()
-        # value = self.kwargs['value']
-        # item = Item.objects.get(pk=self.kwargs['pk'])
-        # title = item.title
-        # price = get_price(item.title,value)
-        # if price and title:
-        #     Cart.objects.create(item=title,price=price)
+
         return render(self.request,self.template_name)
 
     def post(self,request,*args,**kwargs):
@@ -195,16 +171,18 @@ class TransactionView(generic.View):
         # Display a very generic error to the user, and maybe send
         # yourself an email
             pass
+
         except Exception as e:
         # Something else happened, completely unrelated to Stripe
             print(e)
-       
         return HttpResponseRedirect(reverse('success'))
         
 def success(request):
     return render(request,'core/success.html',{'message':'Transaction successful You will be credited soon!'})
 
 def login_user(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('dashboard'))
     username = request.POST.get('username')
     password = request.POST.get('password')
     user = authenticate(request,username=username,password=password)
@@ -227,16 +205,16 @@ def logout_user(request):
 
 #         return render(self.request,self.template_name)
 
-    # def post(self,request,*args,**kwargs):
-    #     stripe.api_key = ''
-    #     intent = stripe.PaymentIntent.create(
-    #         amount=1099,
-    #         currency='usd',
-    #         # Verify your integration in this guide by including this parameter
-    #         metadata={'integration_check': 'accept_a_payment'},
-    #         )
-    #     context = {'client_secret':intent.client_secret }
-    #     return JsonResponse({'client_secret':intent.client_secret })
+#     def post(self,request,*args,**kwargs):
+#         stripe.api_key = ''
+#         intent = stripe.PaymentIntent.create(
+#             amount=1099,
+#             currency='usd',
+#             # Verify your integration in this guide by including this parameter
+#             metadata={'integration_check': 'accept_a_payment'},
+#             )
+#         context = {'client_secret':intent.client_secret }
+#         return JsonResponse({'client_secret':intent.client_secret })
 
 # def payment(request):
 #     stripe.api_key = ''
