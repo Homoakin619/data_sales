@@ -1,0 +1,54 @@
+
+    <h1 class="visually-hidden">Sidebars examples</h1>
+
+    <div class="back d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 220px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="30" height="30"><use xlink:href="#people-circle"></use></svg>
+          {% if request.user.is_authenticated %}
+          <span class="fs-4">{{ request.user.username }}</span>
+          {% else %}
+          <span>Unknown user</span>
+          {% endif %}
+        </a>
+        {% if request.user.is_authenticated %}
+        <p >BALANCE : {{ balance }}</p>
+        {% endif %}
+        
+        <hr class="mt-0">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <a href="" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+              Dashboard
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link text-white d-flex align-items-center text-decoration-none dropdown-toggle" id="orderDrop" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+              Orders
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="orderDrop">
+                <li><a class="dropdown-item" href="">All Orders</a></li>
+                <li><a class="dropdown-item" href="">Completed </a></li>
+                <li><a class="dropdown-item" href="#">Processing</a></li>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+              Products
+            </a>
+          </li>
+        </ul>
+        <hr>
+        <div class="">
+          <a href="{% url 'logout' %}" class="d-flex align-items-center text-white text-decoration-none" >
+            
+            <strong>Logout</strong>
+          </a>
+          
+        </div>
+      </div>
+   
+
+  

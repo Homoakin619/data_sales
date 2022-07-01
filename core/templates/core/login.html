@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h4>Payment </h4>
+<form method="post" id='modal-form'>
+    {% csrf_token %}
+    <label for='user_input'>Username</label>
+    <input type="text" id='user_input' name='username'> <br/> <br>
+    <label for="password_input">Password</label>
+    <input type="password" name="password" id="password_input" required > <br/> <br>
+    <input type="submit" value="Login">
+</form>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-3">
+    {{ stripe }}
+    <div class="row gx-3 gy-3 pt-2 ">
+        {% for item in items %}
+        <div class="col-sm-2 card me-4 shadow">
+            <img class="img-fluid mx-auto" src="{{ item.logo.url }}"  height="120"></img>
+            <div class="card-body">
+                <table>
+                    <tbody>
+                        {% for network,price in item.get_item_price %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'transact' %}" class="btn btn-sm btn-danger me-3" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-value="{{ price }}" role="button" >
+                                    {{ network }}
+                                </a>
+                            </td>
+                            <td><a class="btn btn-sm btn-danger ms-3 disabled">{{ price }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="paymentModalLabel">Payment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" id="payment-form">
+              {% csrf_token %}
+              <div class="form-row">
+                <label for="card-element">
+                  Credit or debit card
+                </label>
+
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+                
+                  <!-- <label for="amount">Price</label> -->
+                  <input type="text" name="amount" id="amnt" hidden>
+                
+                <!-- Used to display Element errors. -->
+                <div id="card-errors" role="alert"></div>
+              </div>
+              <div class="d-grid gap-2 d-md-block">
+                  <!-- <input type="submit" class="btn btn-info" value="Submit Payment"> -->
+                <button class="btn btn-info btn-block mt-2" >Submit Payment</button>
+              </div>
+              
+          </form>
+          <div class="modal-footer">
+            {% if messages %} 
+                {% for message in messages %} 
+                    <p> {{ message }} </p>
+                {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block script %} 
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    var stripe = Stripe('{{ stripe }}');
+    var elements = stripe.elements();
+
+</script>
+{% endblock script %}
