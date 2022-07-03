@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Customer,Card,Item,Transaction,Cart
+from .models import Customer,Card,Merchant,Transaction,Cart
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
@@ -10,7 +10,7 @@ class CustomerAdmin(admin.ModelAdmin):
 
 admin.site.register(Card)
 admin.site.register(Cart)
-admin.site.register(Item)
+admin.site.register(Merchant)
 
 @admin.register(Transaction)
 class Transaction(admin.ModelAdmin):

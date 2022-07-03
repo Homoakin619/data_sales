@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container mt-3">
+<div class="container mt-3" >
 
     <div class="row gx-3 gy-3 pt-2 ">
         {% for item in items %}
@@ -14,7 +14,8 @@
                         {% for network,price in item.get_item_price %}
                         <tr>
                             <td>
-                                <a href="{% url 'transact' %}" class="btn btn-sm btn-danger me-3" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-value="{{ price }}" role="button" >
+                                <a href="{% url 'transact' %}" quantity='{{ network }}' name='{{ item.title }}' class="btn btn-sm btn-danger me-3" data-bs-toggle="modal" 
+                                {% if balance < 350 %} data-bs-target="#paymentModal" {% else %} data-bs-target="#pinModal" {% endif %} data-bs-value="{{ price }}" role="button" >
                                     {{ network }}
                                 </a>
                             </td>
@@ -50,8 +51,9 @@
                   <!-- A Stripe Element will be inserted here. -->
                 </div>
                 
-                  <!-- <label for="amount">Price</label> -->
-                  <input type="text" name="amount" id="amnt" hidden>
+                  <label for="amount">Amount :</label>
+                  <input class="form-control" type="text" name="amount" id="amount" >
+                  <input type="text" name="form-name" value="card-form" hidden>
                 
                 <!-- Used to display Element errors. -->
                 <div id="card-errors" role="alert"></div>
@@ -60,7 +62,6 @@
                   <!-- <input type="submit" class="btn btn-info" value="Submit Payment"> -->
                 <button class="btn btn-info btn-block mt-2" >Submit Payment</button>
               </div>
-              
           </form>
           <div class="modal-footer">
             {% if messages %} 
@@ -74,14 +75,81 @@
     </div>
   </div>
 
+  <!-- Pin Modal -->
+  <div class="modal fade" id="pinModal" tabindex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pinModalLabel">Payment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" id='pin-form'>
+              {% csrf_token %}
+              <label for="pin">Enter PIN</label>
+              <input type="password" class="form-control" id="pin" name="pin" >
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="self_recharge" id="self_recharge">
+                <label class="form-check-label" for="self_recharge">
+                  Recharge For Self
+                </label>
+              </div>
+              <div class="hideable_field">
+                <input class="form-control" type="text" name="beneficiary">
+              </div>
+              <input type="text" name="amounts" hidden>
+              <input type="text" name="form-name" value="pin-form" hidden>
+              <input type="text" name="merchant" hidden>
+              <input type="text" name="quantity" hidden>
+              <button class="btn btn-success">Make Payment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <form method="post" id='pin-form'>
+    {% csrf_token %}
+    <label for="pin">Enter PIN</label>
+    <input type="password" class="form-control" id="pin" name="pin" >
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="self_recharge" id="self_recharge">
+      <label class="form-check-label" for="self_recharge">
+        Self
+      </label>
+    </div>
+    <div class="hideable_field">
+      <input type="text" name="beneficiary">
+    </div>
+    <input type="text" name="amounts" hidden>
+    <input type="text" name="form-name" value="card-form" hidden>
+    <button class="btn btn-success">Make Payment</button>
+</form> -->
+
 {% endblock %}
 
-{% block script %} 
+{% block extra_script %} 
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
+  var pay_form = $('#payment-form')
+  if (pay_form.is(":visible")) {
     var stripe = Stripe('{{ stripe }}');
     var elements = stripe.elements();
+  }
+    var hideable_field = $('.hideable_field');
+    
 
+    var self_recharge = document.querySelector("input[name='self_recharge']");
+
+    self_recharge.addEventListener('change',function() {
+      if (this.checked) {
+        hideable_field.hide();
+      } else {
+        hideable_field.show();
+      }
+    })
+
+    
 </script>
-{% endblock script %}
+{% endblock extra_script %}

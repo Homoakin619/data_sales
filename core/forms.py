@@ -42,5 +42,11 @@ class CustomerForm(UserCreationForm):
         user.groups.add(group)
         return user
 
+
+class CustomerDetailsForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = ('phone',)
+
 # class PaymentForm(forms.Form):
 #     pay_user = forms.ChoiceField(label='self',widget=forms.CheckboxInput())

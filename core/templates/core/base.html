@@ -5,9 +5,21 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+        <script src="{% static 'js/jquery.min.js' %}"></script>
         {% block script %} 
 
         {% endblock script %}
+        
+        <script type="text/javascript">
+          // function price(){
+          //   alert('hello')
+          //   var balance = document.querySelector('.balance').value
+          //   console.log(balance)
+          //   alert(balance)
+          //   }
+
+          //   window.onload = price()
+        </script>
     </head>
     
     <body>
@@ -78,7 +90,11 @@
             </div>  
         </main>
     </body>
+    
     <script src="{% static 'js/myscript.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    {% block extra_script %} 
+
+    {% endblock extra_script %} 
 
 </html>

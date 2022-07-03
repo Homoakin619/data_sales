@@ -24,7 +24,7 @@ DATA_QTY = (
 		('2GB','2GB')
 	)
 
-class Item(models.Model):
+class Merchant(models.Model):
 	logo = models.ImageField(null=True,blank=True)
 	title = models.CharField(max_length=10,null=True)
 	data_price = jsonfield.JSONField()
@@ -49,20 +49,22 @@ class Card(models.Model):
 
 class Transaction(models.Model):
 	transaction_id = models.CharField(max_length=100,unique=True)
+	user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+	beneficiary = models.BigIntegerField()
 	successful = models.BooleanField(default=False)
-	item = models.ForeignKey(Item,on_delete=models.CASCADE,null=True)
-	item_qty = models.IntegerField(null=True)
-	date = models.DateField()
+	merchant = models.CharField(max_length=10,null=True)
+	item_qty = models.CharField(max_length=5,null=True)
+	date = models.DateField(auto_now_add=True)
 
 class Customer(models.Model):
 	image = models.ImageField(null=True,blank=True)
 	user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
 	card = models.ForeignKey(Card,models.SET_NULL,blank=True,null=True)
 	ref_id = models.CharField(max_length=50,unique=True)
-	phone = models.IntegerField(unique=True)
+	phone = models.BigIntegerField(unique=True)
 	balance = models.FloatField(default=00.00)
 	pin = models.IntegerField(blank=True,null=True)
-	transactions = models.ForeignKey(Transaction,models.SET_NULL,blank=True,null=True)
+	
 
 	def __str__(self):
 		return self.user.username

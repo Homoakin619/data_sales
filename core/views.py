@@ -1,18 +1,28 @@
-from msilib.schema import Error
 from django.contrib import messages
 from django.forms import ValidationError
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render,get_object_or_404
 from django.views import generic
 from django.contrib.auth import login,authenticate,logout
 from django.http import HttpResponseRedirect,JsonResponse
 from django.urls import reverse
 from django.conf import settings
+from django.contrib.auth.models import User
 
 
 
-from .models import Customer,Item,Cart
-from .forms import CustomerForm
+from .models import Customer,Merchant,Cart, Transaction
+from .forms import CustomerForm,CustomerDetailsForm
+
 import stripe
+import random
+import string
+
+def get_ref_id():
+	strings = string.ascii_lowercase + string.digits
+	result = ''
+	for i in range(8):
+		result += ''.join(random.choice(strings))
+	return result
 
 stripe.api_key = settings.STRIPE_KEY
 
@@ -39,6 +49,7 @@ class RegisterView(generic.View):
         context = {'form':form}
         return render(self.request,self.template_name,context=context)
 
+
     def post(self,*args,**kwargs):
         form = CustomerForm(self.request.POST)
         if form.is_valid():
@@ -52,6 +63,25 @@ class RegisterView(generic.View):
             return HttpResponseRedirect('dashboard')
         return render(self.request,self.template_name,context={'form':form})
 
+class EditProfileView(generic.View):
+    template_name = 'core/edit-profile.html'
+    def get(self,*args,**kwargs):
+        
+        query = get_object_or_404(Customer,user=self.request.user)
+        context = {}
+        context['form'] = CustomerDetailsForm(instance=query)
+        return render(self.request,self.template_name,context=context)
+    def post(self,*args,**kwargs):
+        query = get_object_or_404(Customer,user=self.request.user)
+        form = CustomerDetailsForm(self.request.POST,instance=query)
+        if form.is_valid():
+            self.request.user.save()
+            form.save()
+            print('Form Passed')
+            return HttpResponseRedirect(reverse('profile'))
+        print('form failed')
+        return self.get(*args,**kwargs)
+
 class ProfileView(generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
@@ -63,62 +93,91 @@ class DashboardView(generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
         user = self.request.user
-        
         context ={ }
         if user.is_authenticated:
             customer = Customer.objects.get(user=user)
             context['balance']=customer.balance
         context['stripe'] = settings.STRIPE_PK
-        context['items']=Item.objects.all()
+        context['items']=Merchant.objects.all()
         return render(self.request,self.template_name,context=context)
 
     # post-method to purchase data
     def post(self,*args,**kwargs):
-        print(self.request)
-        amount =  self.request.POST['amount']
-        token = self.request.POST.get('stripeToken')
-        print('Token: ',token)
-        print('Amount: ',amount)
-        try:
-            charge = stripe.Charge.create(
-                amount=int(amount)*100,
-                currency='usd',
-                description='Example charged card',
-                source=token,
-                )
+        user = self.request.user
+        customer = get_object_or_404(Customer,user=user)
+        # print(self.request.POST.get('amounts'))
+        # print(self.request.POST.get('quantity'))
+        
 
-        except stripe.error.CardError as e:
-        # Since it's a decline, stripe.error.CardError will be caught
-            print('Status is: %s' % e.http_status)
-            print('Code is: %s' % e.code)
-            # param is '' in this case
-            print('Param is: %s' % e.param)
-            print('Message is: %s' % e.user_message)
-            raise ValidationError(e)
-        except stripe.error.RateLimitError as e:
-        # Too many requests made to the API too quickly
-            raise ValidationError(e)
-        except stripe.error.InvalidRequestError as e:
-        # Invalid parameters were supplied to Stripe's API
-            raise ValidationError("there is an error at %s" %e.param)
-        except stripe.error.AuthenticationError as e:
-        # Authentication with Stripe's API failed
-        # (maybe you changed API keys recently)
-            print("Message is: Authentication with Stripe's API failed")
-        except stripe.error.APIConnectionError as e:
-        # Network communication with Stripe failed
-            print(e)
-            raise ValidationError(e)
-        except stripe.error.StripeError as e:
-        # Display a very generic error to the user, and maybe send
-        # yourself an email
-        #     messages.error(self.request,'Your PIN is incorrect!')
-            raise ValidationError(e)
-        except Exception as e:
-        # Something else happened, completely unrelated to Stripe
-            raise ValidationError(e)
-        print(charge.id)
-        return HttpResponseRedirect(reverse('success'))
+        if self.request.POST.get('form-name') == 'pin-form':
+            merchant = self.request.POST.get('merchant')
+            item_qty = self.request.POST.get('quantity')
+            amount =  int(self.request.POST['amounts'])
+            user_pin = customer.pin
+            pin = int(self.request.POST.get('pin'))
+            benef = self.request.POST.get('beneficiary',False)
+            if pin == user_pin:
+                if benef is not False:
+                    beneficiary = customer.phone
+                else:
+                    beneficiary = self.request.POST.get('beneficiary')
+                # print('benef',beneficiary)
+                balance = customer.balance - amount
+                customer.balance = balance
+                customer.save()
+                transaction_id = get_ref_id()
+                # user,beneficiary,merchant
+                transaction =Transaction.objects.create(
+                        transaction_id=transaction_id, user=user, merchant=merchant, beneficiary=beneficiary, item_qty=item_qty,successful=True
+                    )
+                transaction.save()
+                return HttpResponseRedirect(reverse('success'))
+        
+        
+        # try:
+        #     charge = stripe.Charge.create(
+        #         amount=int(amount)*100,
+        #         currency='usd',
+        #         description='Example charged card',
+        #         source=token,
+        #         )
+
+        # except stripe.error.CardError as e:
+        # # Since it's a decline, stripe.error.CardError will be caught
+        #     print('Status is: %s' % e.http_status)
+        #     print('Code is: %s' % e.code)
+        #     # param is '' in this case
+        #     print('Param is: %s' % e.param)
+        #     print('Message is: %s' % e.user_message)
+        #     raise ValidationError(e)
+        # except stripe.error.RateLimitError as e:
+        # # Too many requests made to the API too quickly
+        #     raise ValidationError(e)
+        # except stripe.error.InvalidRequestError as e:
+        # # Invalid parameters were supplied to Stripe's API
+        #     raise ValidationError("there is an error at %s" %e.param)
+        # except stripe.error.AuthenticationError as e:
+        # # Authentication with Stripe's API failed
+        # # (maybe you changed API keys recently)
+        #     print("Message is: Authentication with Stripe's API failed")
+        # except stripe.error.APIConnectionError as e:
+        # # Network communication with Stripe failed
+        #     print(e)
+        #     raise ValidationError(e)
+        # except stripe.error.StripeError as e:
+        # # Display a very generic error to the user, and maybe send
+        # # yourself an email
+        # #     messages.error(self.request,'Your PIN is incorrect!')
+        #     raise ValidationError(e)
+        # except Exception as e:
+        # # Something else happened, completely unrelated to Stripe
+        #     raise ValidationError(e)
+        # print(charge.id)
+        # customer = get_object_or_404(User,username=self.request.user.username)
+        # transaction = Transaction.objects.create(transaction_id=charge.id)
+        # customer.transa
+
+        
 
 
 class TransactionView(generic.View):

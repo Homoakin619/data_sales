@@ -10,7 +10,7 @@
             <p>Username : {{ request.user.username }}</p>
             <p>Phone : {{ customer.phone }}</p>
             <p>Ref Id : {{ customer.ref_id }}</p>
-            <button class="btn btn-success">Edit</button>
+            <a href="{% url 'edit-profile' %}" class="btn btn-success">Edit</a>
         </div>
     </div>
 </div>
