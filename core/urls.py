@@ -11,10 +11,21 @@ urlpatterns = [
 		path('transact/',views.TransactionView.as_view(),name='transact'),
 		path('profile/',views.ProfileView.as_view(),name='profile'),
 		path('profile/edit',views.EditProfileView.as_view(),name='edit-profile'),
+		path('profile/transactions',views.TransactionHistoryView.as_view(),name='transactions'),
+
+
+		
+		path('admins/backend/',views.AdminHomepage.as_view(),name='admins'),
+		path('admins/backend/transactions/',views.AdminTransactions.as_view(),name='transaction'),
+		path('admins/backend/customers/',views.AdminListUsers.as_view(),name='users'),
+		path('admins/backend/merchants/',views.AdminListMerchants.as_view(),name='merchants'),
+		path('admins/backend/edit_merchant/<int:id>/',views.AdminEditMerchant.as_view(),name='edit_merchant'),
+		# path('admins/backend/edit_customer/<int:id>/',views.AdminEditCustomer.as_view(),name='edit_customer'),
+		
 		
 		# path('payment/',views.payment,name='payment'),
 		path('success/',views.success,name='success'),
-		path('',views.login_user,name='login')
+		path('',views.IndexView.as_view(),name='login')
 		# path('logout',views.logout_user,name='logout'),
 ]
 

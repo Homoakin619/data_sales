@@ -4,6 +4,7 @@ from django.conf import settings
 import jsonfield
 import random
 import string
+import json
 
 def get_ref_id():
 	strings = string.ascii_lowercase + string.digits
@@ -35,9 +36,12 @@ class Merchant(models.Model):
 	def get_item_price(self):
 		result = []
 		items = self.data_price
+		# print('itemsss: ',items)
 		for item in items:
+			# print('item',item)
 			x = (item,items[item])
 			result.append(x)
+		# print(result)
 		return result
 
 class Cart(models.Model):
@@ -54,7 +58,11 @@ class Transaction(models.Model):
 	successful = models.BooleanField(default=False)
 	merchant = models.CharField(max_length=10,null=True)
 	item_qty = models.CharField(max_length=5,null=True)
+	price = models.IntegerField(null=True)
 	date = models.DateField(auto_now_add=True)
+
+	def __str__(self):
+		return self.transaction_id
 
 class Customer(models.Model):
 	image = models.ImageField(null=True,blank=True)

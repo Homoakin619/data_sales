@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 
 
 from .models import Customer,Merchant,Cart, Transaction
-from .forms import CustomerForm,CustomerDetailsForm
+from .forms import CustomerForm,CustomerDetailsForm, LoginForm, MerchantForm, PinForm
 
 import stripe
 import random
@@ -27,41 +27,20 @@ def get_ref_id():
 stripe.api_key = settings.STRIPE_KEY
 
 def get_price(network,value):
-    airtel ={'1GB':400,'2gb':750}
-    mtn ={'1GB':400,'2gb':750}
-    glo ={'1GB':350,'2gb':750}
+    airtel ={'1GB':400,'2GB':750}
+    mtn ={'1GB':400,'2GB':750}
+    glo ={'1GB':350,'2GB':750}
+    etisalat ={'1GB':350,'2GB':750}
     if network.lower() == 'airtel':
-        print(airtel[value])
         return airtel[value]
     if network.lower() == 'mtn':
-        print(mtn[value])
         return mtn[value]
     if network.lower() == 'glo':
-        # print(glo[value])
         return glo[value]
-
-class RegisterView(generic.View):
-    template_name = 'core/index.html'
-    def get (self, *args, **kwargs):
-        if self.request.user.is_authenticated:
-            return HttpResponseRedirect('dashboard')
-        form = CustomerForm()
-        context = {'form':form}
-        return render(self.request,self.template_name,context=context)
+    if network.lower() == 'etisalat':
+        return etisalat[value]
 
 
-    def post(self,*args,**kwargs):
-        form = CustomerForm(self.request.POST)
-        if form.is_valid():
-            user = form.save()
-            username = self.request.POST['username']
-            password = self.request.POST['password1']
-            phone = self.request.POST['phone']
-            new_user = authenticate(username=username,password=password)
-            Customer.objects.create(user=user,phone=phone)
-            login(self.request,new_user)
-            return HttpResponseRedirect('dashboard')
-        return render(self.request,self.template_name,context={'form':form})
 
 class EditProfileView(generic.View):
     template_name = 'core/edit-profile.html'
@@ -85,18 +64,38 @@ class EditProfileView(generic.View):
 class ProfileView(generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
-        context = {}
+        form = PinForm()
+        context = {'form':form}
         context['customer'] = Customer.objects.get(user=self.request.user)
         return render(self.request,self.template_name,context=context)
+    
+    def post(self,*args,**kwargs):
+        customer = Customer.objects.get(user=self.request.user)
+        form = PinForm(self.request.POST)
+        context = {'form':form}
+        context['customer'] = Customer.objects.get(user=self.request.user)
+
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            pin = form.cleaned_data['pin']
+            if email == self.request.user.email:
+                customer.pin = pin
+                customer.save()
+                return self.get(*args,**kwargs)
+            else:
+                context['error'] = True
+                return render(self.request,self.template_name,context=context)
+        else:
+            context['error'] = True
+            return render(self.request,self.template_name,context=context)
+        
+        return render(self.request,self.template_name,context=context)
+        
 
 class DashboardView(generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
-        user = self.request.user
-        context ={ }
-        if user.is_authenticated:
-            customer = Customer.objects.get(user=user)
-            context['balance']=customer.balance
+        context ={}
         context['stripe'] = settings.STRIPE_PK
         context['items']=Merchant.objects.all()
         return render(self.request,self.template_name,context=context)
@@ -105,33 +104,46 @@ class DashboardView(generic.View):
     def post(self,*args,**kwargs):
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
-        # print(self.request.POST.get('amounts'))
-        # print(self.request.POST.get('quantity'))
-        
 
         if self.request.POST.get('form-name') == 'pin-form':
             merchant = self.request.POST.get('merchant')
             item_qty = self.request.POST.get('quantity')
             amount =  int(self.request.POST['amounts'])
             user_pin = customer.pin
-            pin = int(self.request.POST.get('pin'))
-            benef = self.request.POST.get('beneficiary',False)
-            if pin == user_pin:
-                if benef is not False:
-                    beneficiary = customer.phone
-                else:
-                    beneficiary = self.request.POST.get('beneficiary')
-                # print('benef',beneficiary)
-                balance = customer.balance - amount
-                customer.balance = balance
-                customer.save()
-                transaction_id = get_ref_id()
-                # user,beneficiary,merchant
-                transaction =Transaction.objects.create(
-                        transaction_id=transaction_id, user=user, merchant=merchant, beneficiary=beneficiary, item_qty=item_qty,successful=True
-                    )
-                transaction.save()
-                return HttpResponseRedirect(reverse('success'))
+            pin = self.request.POST.get('pin')
+            recharge_self = self.request.POST.get('self_recharge',False)
+            print(recharge_self)
+            if not pin:
+                messages.warning(self.request,'Pin cannot be blank')
+                print('no pin')
+            else:
+                if int(pin) == user_pin:
+                    if recharge_self is not False:
+                        print('using default')
+                        beneficiary = customer.phone
+                    else:
+                        print('picking beneficiary')
+                        beneficiary = self.request.POST.get('beneficiary')
+                    print(beneficiary)
+                    
+                    if not beneficiary:
+                        print('no beneficiary')
+                        messages.warning(self.request,'Kindly select a beneficiary to recharge, or tick checkbox to recharg for self!') 
+                    
+                    else:
+                        print('saving data')
+                        balance = customer.balance - amount
+                        customer.balance = balance
+                        customer.save()
+                        transaction_id = get_ref_id()
+                        price = get_price(merchant,item_qty)
+                        transaction =Transaction.objects.create(
+                                transaction_id=transaction_id, user=user, merchant=merchant, beneficiary=beneficiary, item_qty=item_qty, 
+                                successful=True,price=price
+                            )
+                        transaction.save()
+                        return HttpResponseRedirect(reverse('success'))
+        return self.get(*args,**kwargs)
         
         
         # try:
@@ -239,49 +251,155 @@ class TransactionView(generic.View):
 def success(request):
     return render(request,'core/success.html',{'message':'Transaction successful You will be credited soon!'})
 
-def login_user(request):
-    if request.user.is_authenticated:
-        return HttpResponseRedirect(reverse('dashboard'))
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(request,username=username,password=password)
-    if user is not None:
-        login(request,user)
-        # context = {'message':''}
-        return HttpResponseRedirect(reverse('dashboard'))
-    return render(request,'core/login.html')
+
 
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/')
 
+class TransactionHistoryView(generic.View):
+    template_name = 'core/transaction.html'
+    def get(self,*args,**kwargs):
+        transactions = Transaction.objects.filter(user=self.request.user).order_by('-id')
+        print(transactions)
+        context = {'transactions':enumerate(transactions,start=1)}
+        return render(self.request,self.template_name,context=context)
 
 
 
-# class TransactionView(generic.View):
-#     template_name = 'core/payment.html'
-#     def get(self,request,*args,**kwargs):
+class AdminHomepage(generic.View):
+    template_name = 'core/admins/homepage.html'
+    def get(self,*args,**kwargs):
 
-#         return render(self.request,self.template_name)
+        return render(self.request,self.template_name)
 
-#     def post(self,request,*args,**kwargs):
-#         stripe.api_key = ''
-#         intent = stripe.PaymentIntent.create(
-#             amount=1099,
-#             currency='usd',
-#             # Verify your integration in this guide by including this parameter
-#             metadata={'integration_check': 'accept_a_payment'},
-#             )
-#         context = {'client_secret':intent.client_secret }
-#         return JsonResponse({'client_secret':intent.client_secret })
+class AdminTransactions(generic.View):
+    template_name = 'core/admins/transactions.html'
+    def get(self,*args,**kwargs):
+        context = {'transactions':enumerate(Transaction.objects.all().order_by('-id'),start=1)}
+        return render(self.request,self.template_name,context=context)
 
-# def payment(request):
-#     stripe.api_key = ''
-#     intent = stripe.PaymentIntent.create(
-#             amount=1099,
-#             currency='usd',
-#             # Verify your integration in this guide by including this parameter
-#             metadata={'integration_check': 'accept_a_payment'},
-#             )
-#     context = {'client_secret':intent.client_secret }
-#     return JsonResponse({'client_secret':intent.client_secret })
+class AdminListUsers(generic.ListView):
+    template_name = 'core/admins/users.html'
+    model = User
+    context_object_name = 'customers'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        return context
+
+class AdminListMerchants(generic.ListView):
+    model = Merchant
+    template_name = 'core/admins/merchants.html'
+    context_object_name = 'merchants'
+    
+class AdminEditMerchant(generic.View):
+    template_name = 'core/admins/edit_merchant.html'
+
+    def get(self,*args, **kwargs):
+        query = get_object_or_404(Merchant,id=self.kwargs['id'])
+        form = MerchantForm(instance=query)
+        context = {'form':form }
+        return render(self.request,self.template_name,context=context)
+
+    def post(self,*args,**kwargs):
+        query = get_object_or_404(Merchant,id=self.kwargs['id'])
+        form = MerchantForm(self.request.POST,instance=query)
+        context = {'form':form }
+        if form.is_valid:
+            form.save()
+            return HttpResponseRedirect(reverse('merchants'))
+        return render(self.request,self.template_name,context=context)
+
+class IndexView(generic.View):
+    template_name = 'core/login.html'
+    def get(self,*args,**kwargs):
+        if self.request.user.is_authenticated:
+            if self.request.user.is_staff:
+                return HttpResponseRedirect(reverse('admins'))
+            else:
+                return HttpResponseRedirect('dashboard')
+        form = CustomerForm()
+        login_form = LoginForm()
+        context = {'form':form,'login_form':login_form,'disp':False}
+
+        return render(self.request,self.template_name,context=context)
+    
+    def post(self,*args,**kwargs):
+        form = CustomerForm(self.request.POST or None)
+        login_form = LoginForm(self.request.POST or None)
+        context = {'form':form,'login_form':login_form,'disp':False}
+
+        login_f = self.request.POST.get('login')
+        signup = self.request.POST.get('signup')
+
+        print('signup',signup)
+        print('login',login_f)
+
+        if login_f:
+            print('I am here')
+            if login_form.is_valid():
+                print('Valid Form')
+                username = login_form.cleaned_data['username']
+                password = login_form.cleaned_data['password']
+                user = authenticate(self.request,username=username,password=password)
+                if user is not None:
+                    login(self.request,user)
+                    if self.request.user.is_staff:
+                        return HttpResponseRedirect(reverse('admins'))
+                    else:
+                        return HttpResponseRedirect(reverse('dashboard'))
+                else:
+                    print('useless User')
+                    print(login_form.errors)
+                    context['errors'] = login_form.errors
+                    return render(self.request,self.template_name,context=context)
+            else: 
+                print('Error .......')
+                print(login_form.errors.as_data())
+                print(login_form.errors)
+                # context['errors'] = login_form.errors
+                return render(self.request,self.template_name,context=context)
+        elif signup is not None:
+            if form.is_valid():
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password1']
+                phone = form.cleaned_data['phone']
+                print('username',username)
+                form.save()
+                new_user = authenticate(username=username,password=password)  
+                customer = Customer.objects.create(user=new_user,phone=phone)
+                customer.save()
+                login(self.request,new_user)
+                return HttpResponseRedirect('dashboard')
+            else:
+                print(form.errors)
+                return render(self.request,self.template_name,{'form':form,'disp':True,'errors':form.errors})
+        print('I skipped all!')
+        return render(self.request,self.template_name,context=context)
+
+
+class RegisterView(generic.View):
+    template_name = 'core/index.html'
+    def get (self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return HttpResponseRedirect('dashboard')
+        form = CustomerForm()
+        context = {'form':form}
+        return render(self.request,self.template_name,context=context)
+
+
+    def post(self,*args,**kwargs):
+        form = CustomerForm(self.request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = self.request.POST['username']
+            password = self.request.POST['password1']
+            phone = self.request.POST['phone']
+            new_user = authenticate(username=username,password=password)
+            Customer.objects.create(user=user,phone=phone)
+            login(self.request,new_user)
+            return HttpResponseRedirect('dashboard')
+        return render(self.request,self.template_name,context={'form':form})
+

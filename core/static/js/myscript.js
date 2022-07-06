@@ -1,35 +1,17 @@
 
 
-// function viewModal(v_name) {
-//     var new_val = v_name
-//     form = document.getElementById('modal-form');
-//     var price = document.getElementById(`${new_val}`).value;
-    
-//     if (new_val != ''){
-//         document.querySelector("input[name='network']").value = new_val;
-//         document.querySelector("input[name='price']").value = price;
-//             form.style.display = 'block';
-            
-//         }    
-// }
 
 var pinModal = document.getElementById('pinModal')
 pinModal.addEventListener('show.bs.modal', function (event) {
+  
   // Button that triggered the modal
   var button = event.relatedTarget
 
-  // Extract info from data-bs-* attributes
   var price = button.getAttribute('data-bs-value');
 
   var merchant = button.getAttribute('name');
   var quantity = button.getAttribute('quantity');
-  // console.log(merchant)
-  // console.log(price)
-  // Update the modal's content.
-  // var modalTitle = paymentModal.querySelector('.modal-title')
-  // var modalBodyInput = pinModal.querySelector(".modal-body input[name='amount']")
-
-  // modalBodyInput.value = price
+ 
   document.querySelector("input[name='amounts']").value = price;
 
   document.querySelector("input[name='merchant']").value = merchant;
@@ -40,8 +22,6 @@ pinModal.addEventListener('show.bs.modal', function (event) {
   
 })
 
-
-// return response.text();}).then(text => console.log(text))
 
 var style = {
     base: {

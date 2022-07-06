@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'core.context_processors.balance'
             ],
         },
     },
@@ -84,9 +85,9 @@ WSGI_APPLICATION = 'zeedah.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zeedah',
-        'USER': 'root',
-        'PASSWORD':'homoakin619',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD':env('DB_PASS'),
         'HOST':'127.0.0.1',
         'PORT': '3306',
         'OPTIONS':{

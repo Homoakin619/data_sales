@@ -14,6 +14,6 @@ admin.site.register(Merchant)
 
 @admin.register(Transaction)
 class Transaction(admin.ModelAdmin):
-	list_display = ['transaction_id','date','successful']
+	list_display = ['transaction_id','date','merchant','item_qty','successful']
 
 	search_fields = ['transaction_id']

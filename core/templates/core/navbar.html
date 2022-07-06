@@ -1,4 +1,4 @@
-
+{% load balance %}
     <h1 class="visually-hidden">Sidebars examples</h1>
 
     <div class="back d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 220px;">
@@ -11,29 +11,52 @@
           {% endif %}
         </a>
         {% if request.user.is_authenticated %}
-        <p id="balance">BALANCE : {{ balance }}</p>
+        {% if not request.user.is_staff %}
+        <p id="balance">BALANCE : {{ request.user|get_balance }}</p>
+        {% endif %}
         {% endif %}
         
         <hr class="mt-0">
         <ul class="nav nav-pills flex-column mb-auto">
+          {% if request.user.is_staff %} 
+          <li>
+            <a href="{% url 'users' %}" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+              Users
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="{% url 'transaction' %}"  class="nav-link text-white d-flex align-items-center text-decoration-none" id="orderDrop">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+              Transactions
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'merchants' %}" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+              Merchants
+            </a>
+          </li>
+
+
+          {% else %} 
           <li>
             <a href="{% url 'profile' %}" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
               Profile
             </a>
           </li>
+          
           <li class="dropdown">
-            <a href="#" class="nav-link text-white d-flex align-items-center text-decoration-none" id="orderDrop" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="{% url 'transactions' %}"  class="nav-link text-white d-flex align-items-center text-decoration-none" id="orderDrop">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
               Transactions
             </a>
           </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-              Products
-            </a>
-          </li>
+          
+          {% endif %}
         </ul>
         <hr>
         <div class="">
