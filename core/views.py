@@ -57,9 +57,7 @@ class EditProfileView(LoginRequiredMixin,generic.View):
         if form.is_valid():
             self.request.user.save()
             form.save()
-            print('Form Passed')
             return HttpResponseRedirect(reverse('profile'))
-        print('form failed')
         return self.get(*args,**kwargs)
 
 class ProfileView(LoginRequiredMixin,generic.View):
@@ -105,8 +103,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
     def post(self,*args,**kwargs):
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
-        token = self.request.POST.get('stripeToken')
-        
+
         if self.request.POST.get('form-name') == 'pin-form':
             merchant = self.request.POST.get('merchant')
             item_qty = self.request.POST.get('quantity')
@@ -114,26 +111,21 @@ class DashboardView(LoginRequiredMixin,generic.View):
             user_pin = customer.pin
             pin = self.request.POST.get('pin')
             recharge_self = self.request.POST.get('self_recharge',False)
-            print(recharge_self)
+            
             if not pin:
                 messages.warning(self.request,'Pin cannot be blank')
-                print('no pin')
+
             else:
                 if int(pin) == user_pin:
                     if recharge_self is not False:
-                        print('using default')
                         beneficiary = customer.phone
                     else:
-                        print('picking beneficiary')
                         beneficiary = self.request.POST.get('beneficiary')
-                    print(beneficiary)
                     
                     if not beneficiary:
-                        print('no beneficiary')
                         messages.warning(self.request,'Kindly select a beneficiary to recharge, or tick checkbox to recharg for self!') 
                     
                     else:
-                        print('saving data')
                         balance = customer.balance - amount
                         customer.balance = balance
                         customer.save()
@@ -148,6 +140,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
         
         else:
             amount = int(self.request.POST.get('amount'))
+            token = self.request.POST.get('stripeToken')
             try:
                 charge = stripe.Charge.create(
                     amount=amount*100,
@@ -186,17 +179,14 @@ class DashboardView(LoginRequiredMixin,generic.View):
             except Exception as e:
             # Something else happened, completely unrelated to Stripe
                 raise ValidationError(e)
-            print(charge.id)
+
             user = get_object_or_404(User,username=self.request.user.username)
-            customer = get_object_or_404(Customer,user=user)
             transaction = CardTransactions.objects.create(transaction_id=charge.id,user=user,successful=True,amount=amount)
             transaction.save()
             balance = customer.balance
             customer.balance = balance + amount
             customer.save()
             return HttpResponseRedirect(reverse('success'))
-
-        
 
 
 class TransactionView(generic.View):
@@ -252,21 +242,22 @@ class TransactionView(generic.View):
         # Something else happened, completely unrelated to Stripe
             print(e)
         return HttpResponseRedirect(reverse('success'))
-        
+
+
+
 def success(request):
     return render(request,'core/success.html',{'message':'Transaction successful You will be credited soon!'})
-
 
 
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/')
 
+
 class TransactionHistoryView(LoginRequiredMixin,generic.View):
     template_name = 'core/transaction.html'
     def get(self,*args,**kwargs):
         transactions = Transaction.objects.filter(user=self.request.user).order_by('-id')
-        print(transactions)
         context = {'transactions':enumerate(transactions,start=1)}
         return render(self.request,self.template_name,context=context)
 
@@ -299,6 +290,7 @@ class AdminListMerchants(LoginRequiredMixin,generic.ListView):
     template_name = 'core/admins/merchants.html'
     context_object_name = 'merchants'
     
+
 class AdminEditMerchant(LoginRequiredMixin,generic.View):
     template_name = 'core/admins/edit_merchant.html'
 
@@ -316,6 +308,7 @@ class AdminEditMerchant(LoginRequiredMixin,generic.View):
             form.save()
             return HttpResponseRedirect(reverse('merchants'))
         return render(self.request,self.template_name,context=context)
+
 
 class IndexView(generic.View):
     template_name = 'core/login.html'
@@ -339,13 +332,8 @@ class IndexView(generic.View):
         login_f = self.request.POST.get('login')
         signup = self.request.POST.get('signup')
 
-        print('signup',signup)
-        print('login',login_f)
-
         if login_f:
-            print('I am here')
             if login_form.is_valid():
-                print('Valid Form')
                 username = login_form.cleaned_data['username']
                 password = login_form.cleaned_data['password']
                 user = authenticate(self.request,username=username,password=password)
@@ -356,22 +344,17 @@ class IndexView(generic.View):
                     else:
                         return HttpResponseRedirect(reverse('dashboard'))
                 else:
-                    print('useless User')
-                    print(login_form.errors)
                     context['errors'] = login_form.errors
                     return render(self.request,self.template_name,context=context)
             else: 
-                print('Error .......')
-                print(login_form.errors.as_data())
-                print(login_form.errors)
-                # context['errors'] = login_form.errors
+                context['errors'] = login_form.errors
                 return render(self.request,self.template_name,context=context)
+
         elif signup is not None:
             if form.is_valid():
                 username = form.cleaned_data['username']
                 password = form.cleaned_data['password1']
                 phone = form.cleaned_data['phone']
-                print('username',username)
                 form.save()
                 new_user = authenticate(username=username,password=password)  
                 customer = Customer.objects.create(user=new_user,phone=phone)
@@ -379,10 +362,7 @@ class IndexView(generic.View):
                 login(self.request,new_user)
                 return HttpResponseRedirect('dashboard')
             else:
-                print(form.errors)
-                return render(self.request,self.template_name,{'form':form,'disp':True,'errors':form.errors})
-        print('I skipped all!')
+                context = {'form':form,'disp':True,'errors':form.errors}
+                return render(self.request,self.template_name,context=context)
         return render(self.request,self.template_name,context=context)
-
-
 
