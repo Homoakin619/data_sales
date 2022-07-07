@@ -29,6 +29,8 @@ SECRET_KEY = env('SECRET_KEY')
 STRIPE_KEY =env('STRIPE_KEY')
 STRIPE_PK = env('STRIPE_PK')
 
+LOGIN_REDIRECT_URL = 'login'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

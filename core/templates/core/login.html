@@ -49,7 +49,7 @@
                 z-index: 2;
                 }
 
-            .login-form input[type="email"] {
+            .login-form input[type="text"] {
                 margin-bottom: -1px;
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
@@ -111,7 +111,6 @@
               
               <h1 class="h3 mb-3 fw-normal">Sign In</h1>
               
-              <p>Err</p>
               {% for error in login_form.errors %}
               <p style="color: red;">{{ errors }}</p>
               {% endfor %}

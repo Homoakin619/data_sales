@@ -86,11 +86,11 @@
         <div class="modal-body">
           <form method="post" id='pin-form'>
               {% csrf_token %}
-              <label for="pin">Enter PIN</label>
-              <input type="password" class="form-control" id="pin" name="pin" >
+        
+              <input type="password" class="form-control" id="pin" name="pin" placeholder="Enter PIN">
               
-              <div class="hideable_field">
-                <input class="form-control" type="text" name="beneficiary">
+              <div class="hideable_field mt-2">
+                <input class="form-control" type="text" name="beneficiary" placeholder="Enter Beneficiary">
               </div>
 
               <div class="form-check">
