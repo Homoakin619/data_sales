@@ -42,7 +42,16 @@ class Merchant(models.Model):
 			x = (item,items[item])
 			result.append(x)
 		# print(result)
-		return result
+		return result#
+
+class CardTransactions(models.Model):
+	transaction_id = models.CharField(max_length=100,unique=True)
+	user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+	successful = models.BooleanField(default=False)
+	amount = models.IntegerField(null=True)
+	date = models.DateField(auto_now_add=True)
+	time = models.TimeField(auto_now_add=True)
+
 
 class Cart(models.Model):
 	item = models.CharField(max_length=10)

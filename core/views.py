@@ -7,10 +7,11 @@ from django.http import HttpResponseRedirect,JsonResponse
 from django.urls import reverse
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-from .models import Customer,Merchant,Cart, Transaction
+from .models import Customer,Merchant,CardTransactions, Transaction
 from .forms import CustomerForm,CustomerDetailsForm, LoginForm, MerchantForm, PinForm
 
 import stripe
@@ -42,7 +43,7 @@ def get_price(network,value):
 
 
 
-class EditProfileView(generic.View):
+class EditProfileView(LoginRequiredMixin,generic.View):
     template_name = 'core/edit-profile.html'
     def get(self,*args,**kwargs):
         
@@ -61,7 +62,7 @@ class EditProfileView(generic.View):
         print('form failed')
         return self.get(*args,**kwargs)
 
-class ProfileView(generic.View):
+class ProfileView(LoginRequiredMixin,generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
         form = PinForm()
@@ -92,7 +93,7 @@ class ProfileView(generic.View):
         return render(self.request,self.template_name,context=context)
         
 
-class DashboardView(generic.View):
+class DashboardView(LoginRequiredMixin,generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
         context ={}
@@ -104,7 +105,8 @@ class DashboardView(generic.View):
     def post(self,*args,**kwargs):
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
-
+        token = self.request.POST.get('stripeToken')
+        
         if self.request.POST.get('form-name') == 'pin-form':
             merchant = self.request.POST.get('merchant')
             item_qty = self.request.POST.get('quantity')
@@ -143,51 +145,56 @@ class DashboardView(generic.View):
                             )
                         transaction.save()
                         return HttpResponseRedirect(reverse('success'))
-        return self.get(*args,**kwargs)
         
-        
-        # try:
-        #     charge = stripe.Charge.create(
-        #         amount=int(amount)*100,
-        #         currency='usd',
-        #         description='Example charged card',
-        #         source=token,
-        #         )
+        else:
+            amount = int(self.request.POST.get('amount'))
+            try:
+                charge = stripe.Charge.create(
+                    amount=amount*100,
+                    currency='usd',
+                    description='Example charged card',
+                    source=token,
+                    )
 
-        # except stripe.error.CardError as e:
-        # # Since it's a decline, stripe.error.CardError will be caught
-        #     print('Status is: %s' % e.http_status)
-        #     print('Code is: %s' % e.code)
-        #     # param is '' in this case
-        #     print('Param is: %s' % e.param)
-        #     print('Message is: %s' % e.user_message)
-        #     raise ValidationError(e)
-        # except stripe.error.RateLimitError as e:
-        # # Too many requests made to the API too quickly
-        #     raise ValidationError(e)
-        # except stripe.error.InvalidRequestError as e:
-        # # Invalid parameters were supplied to Stripe's API
-        #     raise ValidationError("there is an error at %s" %e.param)
-        # except stripe.error.AuthenticationError as e:
-        # # Authentication with Stripe's API failed
-        # # (maybe you changed API keys recently)
-        #     print("Message is: Authentication with Stripe's API failed")
-        # except stripe.error.APIConnectionError as e:
-        # # Network communication with Stripe failed
-        #     print(e)
-        #     raise ValidationError(e)
-        # except stripe.error.StripeError as e:
-        # # Display a very generic error to the user, and maybe send
-        # # yourself an email
-        # #     messages.error(self.request,'Your PIN is incorrect!')
-        #     raise ValidationError(e)
-        # except Exception as e:
-        # # Something else happened, completely unrelated to Stripe
-        #     raise ValidationError(e)
-        # print(charge.id)
-        # customer = get_object_or_404(User,username=self.request.user.username)
-        # transaction = Transaction.objects.create(transaction_id=charge.id)
-        # customer.transa
+            except stripe.error.CardError as e:
+            # Since it's a decline, stripe.error.CardError will be caught
+                print('Status is: %s' % e.http_status)
+                print('Code is: %s' % e.code)
+                # param is '' in this case
+                print('Param is: %s' % e.param)
+                print('Message is: %s' % e.user_message)
+                raise ValidationError(e)
+            except stripe.error.RateLimitError as e:
+            # Too many requests made to the API too quickly
+                raise ValidationError(e)
+            except stripe.error.InvalidRequestError as e:
+            # Invalid parameters were supplied to Stripe's API
+                raise ValidationError("there is an error at %s" %e.param)
+            except stripe.error.AuthenticationError as e:
+            # Authentication with Stripe's API failed
+            # (maybe you changed API keys recently)
+                print("Message is: Authentication with Stripe's API failed")
+            except stripe.error.APIConnectionError as e:
+            # Network communication with Stripe failed
+                print(e)
+                raise ValidationError(e)
+            except stripe.error.StripeError as e:
+            # Display a very generic error to the user, and maybe send
+            # yourself an email
+            #     messages.error(self.request,'Your PIN is incorrect!')
+                raise ValidationError(e)
+            except Exception as e:
+            # Something else happened, completely unrelated to Stripe
+                raise ValidationError(e)
+            print(charge.id)
+            user = get_object_or_404(User,username=self.request.user.username)
+            customer = get_object_or_404(Customer,user=user)
+            transaction = CardTransactions.objects.create(transaction_id=charge.id,user=user,successful=True,amount=amount)
+            transaction.save()
+            balance = customer.balance
+            customer.balance = balance + amount
+            customer.save()
+            return HttpResponseRedirect(reverse('success'))
 
         
 
@@ -208,8 +215,6 @@ class TransactionView(generic.View):
     def post(self,request,*args,**kwargs):
         amount =  request.POST.get('amount')
         token = request.POST.get('stripeToken')
-        print(token)
-        print(amount)
         try:
             charge = stripe.Charge.create(
                 amount=amount*1000,
@@ -257,7 +262,7 @@ def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/')
 
-class TransactionHistoryView(generic.View):
+class TransactionHistoryView(LoginRequiredMixin,generic.View):
     template_name = 'core/transaction.html'
     def get(self,*args,**kwargs):
         transactions = Transaction.objects.filter(user=self.request.user).order_by('-id')
@@ -267,19 +272,19 @@ class TransactionHistoryView(generic.View):
 
 
 
-class AdminHomepage(generic.View):
+class AdminHomepage(LoginRequiredMixin,generic.View):
     template_name = 'core/admins/homepage.html'
     def get(self,*args,**kwargs):
 
         return render(self.request,self.template_name)
 
-class AdminTransactions(generic.View):
+class AdminTransactions(LoginRequiredMixin,generic.View):
     template_name = 'core/admins/transactions.html'
     def get(self,*args,**kwargs):
         context = {'transactions':enumerate(Transaction.objects.all().order_by('-id'),start=1)}
         return render(self.request,self.template_name,context=context)
 
-class AdminListUsers(generic.ListView):
+class AdminListUsers(LoginRequiredMixin,generic.ListView):
     template_name = 'core/admins/users.html'
     model = User
     context_object_name = 'customers'
@@ -289,12 +294,12 @@ class AdminListUsers(generic.ListView):
         
         return context
 
-class AdminListMerchants(generic.ListView):
+class AdminListMerchants(LoginRequiredMixin,generic.ListView):
     model = Merchant
     template_name = 'core/admins/merchants.html'
     context_object_name = 'merchants'
     
-class AdminEditMerchant(generic.View):
+class AdminEditMerchant(LoginRequiredMixin,generic.View):
     template_name = 'core/admins/edit_merchant.html'
 
     def get(self,*args, **kwargs):
@@ -380,26 +385,4 @@ class IndexView(generic.View):
         return render(self.request,self.template_name,context=context)
 
 
-class RegisterView(generic.View):
-    template_name = 'core/index.html'
-    def get (self, *args, **kwargs):
-        if self.request.user.is_authenticated:
-            return HttpResponseRedirect('dashboard')
-        form = CustomerForm()
-        context = {'form':form}
-        return render(self.request,self.template_name,context=context)
-
-
-    def post(self,*args,**kwargs):
-        form = CustomerForm(self.request.POST)
-        if form.is_valid():
-            user = form.save()
-            username = self.request.POST['username']
-            password = self.request.POST['password1']
-            phone = self.request.POST['phone']
-            new_user = authenticate(username=username,password=password)
-            Customer.objects.create(user=user,phone=phone)
-            login(self.request,new_user)
-            return HttpResponseRedirect('dashboard')
-        return render(self.request,self.template_name,context={'form':form})
 
