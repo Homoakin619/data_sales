@@ -24,7 +24,7 @@ urlpatterns = [
 		
 		# path('payment/',views.payment,name='payment'),
 		path('success/',views.success,name='success'),
-		path('',views.IndexView.as_view(),name='login')
+		path('',views.IndexView.as_view(),name='login_page')
 		# path('logout',views.logout_user,name='logout'),
 ]
 

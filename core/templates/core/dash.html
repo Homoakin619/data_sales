@@ -87,10 +87,17 @@
           <form method="post" id='pin-form'>
               {% csrf_token %}
         
-              <input type="password" class="form-control" id="pin" name="pin" placeholder="Enter PIN">
-              
+              <!-- <input type="password" class="form-control" id="pin" name="pin" placeholder="Enter PIN" required> -->
+              {{ form.pin }}
+              {% for error in form.pin.errors %} 
+                  <p class="text-danger">{{ error }}</p>
+              {% endfor %}
               <div class="hideable_field mt-2">
-                <input class="form-control" type="text" name="beneficiary" placeholder="Enter Beneficiary">
+                <!-- <input class="form-control" type="text" name="beneficiary" placeholder="Enter Beneficiary" > -->
+                {{ form.beneficiary }}
+                {% for error in form.beneficiary.errors %} 
+                  <p class="text-danger">{{ error }}</p>
+                {% endfor %}
               </div>
 
               <div class="form-check">
@@ -100,16 +107,17 @@
                 </label>
               </div>
               
-              <input type="text" name="amounts" hidden>
+              <!-- <input type="text" name="amounts" > -->
+              {{ form.amounts }}
               <input type="text" name="form-name" value="pin-form" hidden>
               <input type="text" name="merchant" hidden>
               <input type="text" name="quantity" hidden>
-              <button class="btn btn-success">Make Payment</button>
+              <button class="btn btn-success mt-1">Make Payment</button>
           </form>
           {% if messages %}
           <ul class="messages">
               {% for message in messages %}
-              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              <p style="text-decoration: none;" {% if message.tags %} class="text-{{ message.tags }}"{% endif %}>{{ message }}</p>
               {% endfor %}
           </ul>
           {% endif %}
@@ -142,7 +150,20 @@
         hideable_field.show();
       }
     })
-
-    
+   
 </script>
+
+{% if error %}
+<script>
+ 
+  // window.onload = () => {
+  //   $('#pinModal').modal('show');
+  // }
+  $(window).load(function(){
+    $('#pinModal').modal('show')
+  })
+  
+</script>
+{% endif %}
+
 {% endblock extra_script %}

@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 from .models import Customer,Merchant,CardTransactions, Transaction
-from .forms import CustomerForm,CustomerDetailsForm, LoginForm, MerchantForm, PinForm
+from .forms import CustomerForm,CustomerDetailsForm, LoginForm, MerchantForm, ChangePinForm, PinPurchaseForm
 
 import stripe
 import random
@@ -63,14 +63,14 @@ class EditProfileView(LoginRequiredMixin,generic.View):
 class ProfileView(LoginRequiredMixin,generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
-        form = PinForm()
+        form = ChangePinForm()
         context = {'form':form}
         context['customer'] = Customer.objects.get(user=self.request.user)
         return render(self.request,self.template_name,context=context)
     
     def post(self,*args,**kwargs):
         customer = Customer.objects.get(user=self.request.user)
-        form = PinForm(self.request.POST)
+        form = ChangePinForm(self.request.POST)
         context = {'form':form}
         context['customer'] = Customer.objects.get(user=self.request.user)
 
@@ -83,48 +83,57 @@ class ProfileView(LoginRequiredMixin,generic.View):
                 return self.get(*args,**kwargs)
             else:
                 context['error'] = True
+                form.add_error('email',ValidationError('Kindly enter a valid email'))
                 return render(self.request,self.template_name,context=context)
         else:
             context['error'] = True
             return render(self.request,self.template_name,context=context)
         
-        return render(self.request,self.template_name,context=context)
         
+
 
 class DashboardView(LoginRequiredMixin,generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
-        context ={}
+        form = PinPurchaseForm()
+        context ={'form':form}
         context['stripe'] = settings.STRIPE_PK
         context['items']=Merchant.objects.all()
         return render(self.request,self.template_name,context=context)
 
     # post-method to purchase data
     def post(self,*args,**kwargs):
+        form = PinPurchaseForm(self.request.POST)
+        
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
+        context = {'items':Merchant.objects.all(),'form':form}
 
         if self.request.POST.get('form-name') == 'pin-form':
-            merchant = self.request.POST.get('merchant')
-            item_qty = self.request.POST.get('quantity')
-            amount =  int(self.request.POST['amounts'])
-            user_pin = customer.pin
-            pin = self.request.POST.get('pin')
-            recharge_self = self.request.POST.get('self_recharge',False)
+            if form.is_valid():
+                print('Valid')
+                pin = form.cleaned_data['pin']
+                benef = form.cleaned_data['beneficiary']
+                amount = int(form.cleaned_data['amounts'])
+                merchant = self.request.POST.get('merchant')
+                item_qty = self.request.POST.get('quantity')
             
-            if not pin:
-                messages.warning(self.request,'Pin cannot be blank')
-
-            else:
+                user_pin = customer.pin
+                recharge_self = self.request.POST.get('self_recharge',False)
+ 
                 if int(pin) == user_pin:
                     if recharge_self is not False:
                         beneficiary = customer.phone
                     else:
-                        beneficiary = self.request.POST.get('beneficiary')
-                    
+                        beneficiary = benef
+                    print('Pin :',pin)
+                    print('Benef: ',beneficiary)
+                    print()
                     if not beneficiary:
-                        messages.warning(self.request,'Kindly select a beneficiary to recharge, or tick checkbox to recharg for self!') 
-                    
+                        context['error'] = True
+                        form.add_error('beneficiary',ValidationError('Kindly select a beneficiary to recharge, or tick checkbox to recharge for self!'))
+                        # messages.warning(self.request,'Kindly select a beneficiary to recharge, or tick checkbox to recharge for self!') 
+                        return render(self.request,self.template_name,context)
                     else:
                         balance = customer.balance - amount
                         customer.balance = balance
@@ -137,6 +146,10 @@ class DashboardView(LoginRequiredMixin,generic.View):
                             )
                         transaction.save()
                         return HttpResponseRedirect(reverse('success'))
+            else:
+                print('Not Valid')
+                context['error'] = True
+                return render(self.request,self.template_name,context)
         
         else:
             amount = int(self.request.POST.get('amount'))
@@ -187,6 +200,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
             customer.balance = balance + amount
             customer.save()
             return HttpResponseRedirect(reverse('success'))
+
 
 
 class TransactionView(generic.View):

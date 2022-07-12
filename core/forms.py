@@ -86,7 +86,7 @@ class CustomerDetailsForm(forms.ModelForm):
         model = Customer
         fields = ('phone',)
 
-class PinForm(forms.Form):
+class ChangePinForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={"class":"form-control","id":"email_id"}))
     pin = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control',"id":"pin_id"}))
 
@@ -99,4 +99,29 @@ class PinForm(forms.Form):
         except ValueError:
             raise ValidationError('PIN cannot be string, enter a valid number as PIN')
         return pin
+        
+class PinPurchaseForm(forms.Form):
+    pin = forms.IntegerField(widget=forms.NumberInput(attrs={"type":"password", "class":"form-control","id":"pin","name":"pin","placeholder":"Enter PIN"}))
+    beneficiary = forms.IntegerField(required=False,widget=forms.NumberInput(attrs={"class":"form-control","name":"beneficiary","placeholder":"Enter Beneficiary"}))
+    amounts = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
+
+    def clean_pin(self):
+        pin = str(self.cleaned_data['pin'])
+        if len(pin) < 4 or len(pin) > 4:
+            raise ValidationError('Enter a valid 4-digit PIN')
+        try:
+            pin = int(pin)
+        except ValueError:
+            raise ValidationError('PIN cannot be a string')
+        return pin
+
+    # def clean_beneficiary(self):
+    #     beneficiary = str(self.cleaned_data['beneficiary'])
+    #     if len(beneficiary) > 10 or len(beneficiary) < 10:
+    #         raise ValidationError('Enter a valid mobile number for beneficiary')
+    #     try:
+    #         beneficiary = int(beneficiary)
+    #     except ValueError:
+    #         raise ValidationError('Enter a valid mobile number for beneficiary')
+    #     return beneficiary
         
