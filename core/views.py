@@ -111,7 +111,6 @@ class DashboardView(LoginRequiredMixin,generic.View):
 
         if self.request.POST.get('form-name') == 'pin-form':
             if form.is_valid():
-                print('Valid')
                 pin = form.cleaned_data['pin']
                 benef = form.cleaned_data['beneficiary']
                 amount = int(form.cleaned_data['amounts'])
@@ -126,9 +125,6 @@ class DashboardView(LoginRequiredMixin,generic.View):
                         beneficiary = customer.phone
                     else:
                         beneficiary = benef
-                    print('Pin :',pin)
-                    print('Benef: ',beneficiary)
-                    print()
                     if not beneficiary:
                         context['error'] = True
                         form.add_error('beneficiary',ValidationError('Kindly select a beneficiary to recharge, or tick checkbox to recharge for self!'))
@@ -147,7 +143,6 @@ class DashboardView(LoginRequiredMixin,generic.View):
                         transaction.save()
                         return HttpResponseRedirect(reverse('success'))
             else:
-                print('Not Valid')
                 context['error'] = True
                 return render(self.request,self.template_name,context)
         
