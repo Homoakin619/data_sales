@@ -1,0 +1,46 @@
+
+.hero-container {
+    /* height: 100vh;
+    width: 100vw; */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hero {
+    /* background-image: url('../img/heel.jpeg'); */
+    background-image: url('../img/blood_banner.jpg');
+    background-size: cover;
+    height: 80vh;
+    width: 100vw;
+    padding: 40px;
+    transition: transform 2s;
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+}
+
+.banner-img{
+    width: 95vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.bottom-item {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 75%;
+}
+
+#btn-round {
+    border-radius: 50px;
+    background-color: red;
+    color : #fff;
+    font-weight: bold;
+}
+
+.round {
+    border-radius: 50px;
+}
