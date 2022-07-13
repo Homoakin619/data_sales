@@ -38,9 +38,10 @@ LOGIN_URL = 'login_page'
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'https://zeedah.herokuapp.com',
     'localhost',
-    '127.0.0.1',
+    
 ]
 
 
@@ -94,14 +95,22 @@ WSGI_APPLICATION = 'zeedah.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD':env('DB_PASS'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'zeedah',
+        'USER': 'postgres',
+        'PASSWORD': 'homoakin619',
         'HOST':'127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS':{
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+        'PORT': '5432',
+        
+
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': env('DB_NAME'),
+        # 'USER': env('DB_USER'),
+        # 'PASSWORD':env('DB_PASS'),
+        # 'HOST':'127.0.0.1',
+        # 'PORT': '3306',
+        # 'OPTIONS':{
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
     }
 }
 
@@ -144,13 +153,54 @@ USE_TZ = True
 
 import os
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+]
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'mysite.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+        'MYAPP': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+    }
+}

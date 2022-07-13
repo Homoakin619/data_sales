@@ -6,11 +6,11 @@ from . import views
 
 urlpatterns = [
 		path('dashboard/',views.DashboardView.as_view(),name='dashboard'),
-		path('logout',views.logout_user,name='logout'),
+		path('logout/',views.logout_user,name='logout'),
 		path('transact/',views.TransactionView.as_view(),name='transact'),
 		path('profile/',views.ProfileView.as_view(),name='profile'),
-		path('profile/edit',views.EditProfileView.as_view(),name='edit-profile'),
-		path('profile/transactions',views.TransactionHistoryView.as_view(),name='transactions'),
+		path('profile/edit/',views.EditProfileView.as_view(),name='edit-profile'),
+		path('profile/transactions/',views.TransactionHistoryView.as_view(),name='transactions'),
 
 
 		

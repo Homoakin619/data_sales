@@ -83,7 +83,7 @@
           </svg>
         <main>
             {% include 'core/navbar.html' %}
-            <div class="container mt-2 ms-4" {% if request.user.is_staff %} style="background-image: url('../../static/placeholder.png');height:100vh;max-width: 100vw;" {% endif %}>
+            <div class="container mt-2 ms-4" >
               {% block content %} 
 
               {% endblock %}
