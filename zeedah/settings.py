@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_heroku',
     'core',
+    'storages',
+    'boto'
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'zeedah.urls'
@@ -166,7 +169,7 @@ STATICFILES_FINDERS = [
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 STATICFILES_DIRS = [
@@ -210,3 +213,11 @@ LOGGING = {
         },
     }
 }
+# Amazon s3 aws cloud bucket settings
+if not DEBUG:
+   AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+   AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+   AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+   STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+   S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+   STATIC_URL = S3_URL

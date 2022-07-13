@@ -22,10 +22,9 @@ urlpatterns = [
 		# path('admins/backend/edit_customer/<int:id>/',views.AdminEditCustomer.as_view(),name='edit_customer'),
 		
 		
-		# path('payment/',views.payment,name='payment'),
 		path('success/',views.success,name='success'),
 		path('',views.IndexView.as_view(),name='login_page')
-		# path('logout',views.logout_user,name='logout'),
+		
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
