@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import environ
 import django_heroku 
+import dj_database_url
 
 env = environ.Env()
 environ.Env.read_env()
@@ -88,6 +89,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'zeedah.wsgi.application'
+DB_USER = env('DB_USER')
+DB_NAME = env('DB_NAME')
+DB_PASS = env('DB_PASS')
 
 
 # Database
@@ -96,9 +100,9 @@ WSGI_APPLICATION = 'zeedah.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zeedah',
-        'USER': 'postgres',
-        'PASSWORD': 'homoakin619',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASS,
         'HOST':'127.0.0.1',
         'PORT': '5432',
         
@@ -114,6 +118,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
