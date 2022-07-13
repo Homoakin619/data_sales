@@ -15,6 +15,7 @@ import environ
 import django_heroku 
 import dj_database_url
 
+
 env = environ.Env()
 environ.Env.read_env()
 
@@ -58,7 +59,7 @@ INSTALLED_APPS = [
     'django_heroku',
     'core',
     'storages',
-    'boto'
+    'boto',
 ]
 
 MIDDLEWARE = [
@@ -213,11 +214,13 @@ LOGGING = {
         },
     }
 }
+
+
 # Amazon s3 aws cloud bucket settings
 if not DEBUG:
    AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
    AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
    AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-   STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+   STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
    STATIC_URL = S3_URL

@@ -1,3 +1,4 @@
 .env
 core/txt-str.py
 .pyc
+.log
