@@ -35,14 +35,11 @@ class Merchant(models.Model):
 
 	def get_item_price(self):
 		result = []
-		items = self.data_price
-		# print('itemsss: ',items)
+		items = json.loads(self.data_price)
 		for item in items:
-			# print('item',item)
 			x = (item,items[item])
 			result.append(x)
-		# print(result)
-		return result#
+		return result
 
 class CardTransactions(models.Model):
 	transaction_id = models.CharField(max_length=100,unique=True)
