@@ -96,9 +96,9 @@ WSGI_APPLICATION = 'zeedah.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zeedah',
-        'USER': 'postgres',
-        'PASSWORD': 'homoakin619',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST':'127.0.0.1',
         'PORT': '5432',
         
