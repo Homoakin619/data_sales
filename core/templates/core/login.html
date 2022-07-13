@@ -111,9 +111,7 @@
               
               <h1 class="h3 mb-3 fw-normal">Sign In</h1>
               
-              {% for error in login_form.errors %}
-              <p style="color: red;">{{ errors }}</p>
-              {% endfor %}
+        
 
               <div class="form-floating">
                 {{ login_form.username }}
@@ -150,7 +148,7 @@
               
 
               <h1 class="h3 mb2 fw-normal">Sign Up</h1>
-              {{ form.non_field_errors }}
+              
               <div class="form-floating">
                 {{ form.username }}
                 <label for="floatingInput">Username</label>

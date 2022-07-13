@@ -6028,3 +6028,977 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [
 [13/Jul/2022 03:55:03] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1623163699.5175343
 [13/Jul/2022 03:55:03] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1623163697.4708579
 [13/Jul/2022 03:55:03] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\api.py first seen with mtime 1624235214.4805446
+[13/Jul/2022 04:47:41] INFO [django.utils.autoreload:637] Watching for file changes with StatReloader
+[13/Jul/2022 04:47:41] DEBUG [django.utils.autoreload:315] Waiting for apps ready_event.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:327] Apps ready_event triggered. Sending autoreload_started signal.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:281] Watching dir C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates with glob **/*.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:281] Watching dir C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\locale with glob **/*.mo.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:281] Watching dir C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django_heroku\locale with glob **/*.mo.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:281] Watching dir C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\locale with glob **/*.mo.
+[13/Jul/2022 04:47:43] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\loader.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\cp1252.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\expressions.py first seen with mtime 1623163701.3025827
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\comparison.py first seen with mtime 1623163701.3228257
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\exceptions.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\defaults.py first seen with mtime 1623163701.552097
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langhebrewmodel.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\importlib\abc.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\backends\base.py first seen with mtime 1623163701.1455443
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\deletion.py first seen with mtime 1623163701.3008497
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\euckrprober.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\utils.py first seen with mtime 1623163701.1714945
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\response.py first seen with mtime 1623163701.4697497
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\utils.py first seen with mtime 1623163701.4717507
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\http\server.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\sre_compile.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\locks.py first seen with mtime 1623163701.1664913
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\dates.py first seen with mtime 1623163701.5661435
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\wsgiref\simple_server.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\logging\config.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\sku.py first seen with mtime 1624766245.6633577
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\domreg.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\converters.py first seen with mtime 1623163701.5002463
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\application_fee.py first seen with mtime 1624766245.5430522
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\cmd.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\packages.py first seen with mtime 1624235212.446067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\utils.py first seen with mtime 1623163693.8626482
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\urllib\parse.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\__init__.py first seen with mtime 1624235212.395972
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\stat.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\hashlib.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\constants.py first seen with mtime 1623163701.330663
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\_header_value_parser.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\__init__.py first seen with mtime 1623163701.2230008
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\charsetprober.py first seen with mtime 1624235211.5623953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\radar\__init__.py first seen with mtime 1624766245.7365923
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\middleware.py first seen with mtime 1630117769.2747953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\trsock.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\__init__.py first seen with mtime 1623163701.142541
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\base.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\queue.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\__init__.py first seen with mtime 1624766245.685114
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\client.py first seen with mtime 1623163701.4902222
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\application_fee_refund.py first seen with mtime 1624766245.5440528
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\price.py first seen with mtime 1624766245.6438012
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\datastructures.py first seen with mtime 1623163701.5129476
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\queues.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\api.py first seen with mtime 1624235212.4148111
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\xmlbuilder.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ssl.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\apps\__init__.py first seen with mtime 1623163694.366375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\recipient.py first seen with mtime 1624766245.6513474
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\terminal\reader.py first seen with mtime 1624766245.791853
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\coroutines.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\posixpath.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\admin_urls.py first seen with mtime 1623163696.1942875
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\defaulttags.py first seen with mtime 1623163701.4627428
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\engine.py first seen with mtime 1623163701.4637454
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\cache.py first seen with mtime 1623163701.5103092
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\autoreload.py first seen with mtime 1623163701.5080276
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\six.py first seen with mtime 1630027685.8245208
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_decimal.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\features.py first seen with mtime 1623163701.2332008
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\admin.py first seen with mtime 1623163697.4845355
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\security\csrf.py first seen with mtime 1623163701.1623702
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\mail\utils.py first seen with mtime 1623163701.1799586
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\base.py first seen with mtime 1623163701.2977738
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\asyncio.py first seen with mtime 1623163701.5068524
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\charset.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\backends\__init__.py first seen with mtime 1623163701.144547
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\serializers\base.py first seen with mtime 1623163701.21629
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_collections_abc.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\i18n.py first seen with mtime 1623163701.5530977
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\string.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\i18n.py first seen with mtime 1623163701.484925
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\contentmanager.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\latin1prober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\checkout\__init__.py first seen with mtime 1624766245.7255845
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\constants.py first seen with mtime 1623163698.566035
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\admin.py first seen with mtime 1657234721.6847882
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\__init__.py first seen with mtime 1623163701.1357257
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templatetags\balance.py first seen with mtime 1657121444.9092236
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\decorators\cache.py first seen with mtime 1623163701.5565543
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\gettext.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sites\__init__.py first seen with mtime 1623163699.5269368
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\NodeFilter.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loader.py first seen with mtime 1623163701.4667478
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\encoders.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\unicodedata.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\actions.py first seen with mtime 1623163694.8710399
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\ipv6.py first seen with mtime 1623163701.5280387
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\filters.py first seen with mtime 1623163694.8762693
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\paginator.py first seen with mtime 1623163701.137729
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\commands\__init__.py first seen with mtime 1623163701.192776
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\__version__.py first seen with mtime 1624235212.395972
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\wsgiref\handlers.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\euctwfreq.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\invoice_item.py first seen with mtime 1624766245.571751
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\billing_portal\configuration.py first seen with mtime 1624766245.7245834
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\iterators.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\serializers\json.py first seen with mtime 1623163701.2172906
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\importlib\resources.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\pytz\lazy.py first seen with mtime 1623163692.8892603
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\operator.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\socket.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\concurrent\futures\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\concurrent\futures\_base.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\conf\__init__.py first seen with mtime 1623163694.3697777
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\_psycopg.cp38-win_amd64.pyd first seen with mtime 1630117768.6225028
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\certifi\__init__.py first seen with mtime 1624235210.4907873
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\lexer.py first seen with mtime 1623163693.8586454
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\translation.py first seen with mtime 1623163701.1580465
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\__init__.py first seen with mtime 1623163701.4894245
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\token.py first seen with mtime 1624766245.67712
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\socketserver.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\admin_modify.py first seen with mtime 1623163696.1933367
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\loaders.py first seen with mtime 1643971057.20218
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\translation\reloader.py first seen with mtime 1623163701.545482
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\__init__.py first seen with mtime 1623163701.295772
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\text.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\streams.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\__init__.py first seen with mtime 1623163701.1511664
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ntpath.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\response.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\serializers\__init__.py first seen with mtime 1623163701.2152898
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\idna\intranges.py first seen with mtime 1624235210.7720375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\features.py first seen with mtime 1623163701.2647076
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\http\cookiejar.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\query.py first seen with mtime 1623163701.3075829
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\error.py first seen with mtime 1624766245.3727496
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\select.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\cgi.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\proxy.py first seen with mtime 1623163701.3154035
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\io.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\http\request.py first seen with mtime 1623163701.4450321
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\importlib\machinery.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\radar\value_list.py first seen with mtime 1624766245.738593
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\handlers.py first seen with mtime 1623163701.1222198
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\forms.py first seen with mtime 1657597339.7823553
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jsonfield\forms.py first seen with mtime 1656625116.875116
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\connection.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\checks.py first seen with mtime 1623163694.873043
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\country_spec.py first seen with mtime 1624766245.5546105
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\selector_events.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\dates.py first seen with mtime 1623163701.5149484
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\copy.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\tokens.py first seen with mtime 1623163693.876657
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\pytz\tzfile.py first seen with mtime 1623163692.8921309
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\html.py first seen with mtime 1623163701.525037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\parser.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\reverse_related.py first seen with mtime 1623163701.3204067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\reporting\report_run.py first seen with mtime 1624766245.741595
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\random.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\sql.py first seen with mtime 1623163693.859646
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\code.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\formsets.py first seen with mtime 1623163701.343153
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\exceptions.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_hashlib.pyd first seen with mtime 1613739380.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\decorators.py first seen with mtime 1623163701.5179503
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\base64mime.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\base64.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\logging\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\datetime_safe.py first seen with mtime 1623163701.515949
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\multiprocessing\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\source_transaction.py first seen with mtime 1624766245.665359
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\proactor_events.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\extensions.py first seen with mtime 1630117768.6292255
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ctypes\_endian.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\_collections.py first seen with mtime 1624235211.1517358
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\zeedah\settings.py first seen with mtime 1657680899.6213026
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\__init__.py first seen with mtime 1623163701.4469895
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\radar\early_fraud_warning.py first seen with mtime 1624766245.738593
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\refund.py first seen with mtime 1624766245.656354
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\ansi.py first seen with mtime 1643971055.0771196
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\__init__.py first seen with mtime 1643971055.0771196
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\tax_code.py first seen with mtime 1624766245.6711159
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\__init__.py first seen with mtime 1624235211.5311425
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\numberformat.py first seen with mtime 1623163701.5337183
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\multipart_data_generator.py first seen with mtime 1624766245.4636319
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\wsgiref\headers.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\multipart.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\creation.py first seen with mtime 1623163701.231794
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\l10n.py first seen with mtime 1623163701.4859257
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loaders\cached.py first seen with mtime 1623163701.4801424
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\widgets.py first seen with mtime 1623163694.8995311
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\environ\__init__.py first seen with mtime 1644305965.8259878
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\reversal.py first seen with mtime 1624766245.658355
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\subprocess.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_socket.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\__init__.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\structures.py first seen with mtime 1624235212.446067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\csrf.py first seen with mtime 1623163701.5500958
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\__init__.py first seen with mtime 1623163699.0384152
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\dateparse.py first seen with mtime 1623163701.5139477
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\models.py first seen with mtime 1623163701.2927701
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\pytz\__init__.py first seen with mtime 1623163692.8872564
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\account.py first seen with mtime 1624766245.5350482
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\decorators.py first seen with mtime 1623163696.4277194
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\adapters.py first seen with mtime 1624235212.4148111
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\formatter.py first seen with mtime 1623163693.8548374
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\http_client.py first seen with mtime 1624766245.3737502
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\eucjpprober.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\multiprocessing\process.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\auth.py first seen with mtime 1624235212.4148111
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\bisect.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\apps.py first seen with mtime 1623163696.421449
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\_json.py first seen with mtime 1630117768.5674653
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\account_link.py first seen with mtime 1624766245.537049
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\handlers\exception.py first seen with mtime 1623163701.1757605
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ipaddress.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\manage.py first seen with mtime 1656626261.970473
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\window.py first seen with mtime 1623163701.3266604
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\mbcssm.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\resolvers.py first seen with mtime 1623163701.5030136
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\policy.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\minidom.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\compiler.py first seen with mtime 1643971057.170941
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\engine\filter_stack.py first seen with mtime 1623163693.865657
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\decorators\csrf.py first seen with mtime 1623163701.5593631
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jsonfield\utils.py first seen with mtime 1656625116.8961327
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\tests.py first seen with mtime 1643971057.233432
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\util.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\protocols.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\secrets.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\commands\runserver.py first seen with mtime 1623163701.203942
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\customer_balance_transaction.py first seen with mtime 1624766245.560615
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\forms.py first seen with mtime 1623163696.4287188
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\billing_portal\session.py first seen with mtime 1624766245.7245834
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\models.py first seen with mtime 1623163696.4322412
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\status_codes.py first seen with mtime 1624235212.446067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\translation\trans_real.py first seen with mtime 1623163701.5490952
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\related.py first seen with mtime 1623163701.3174047
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\errorcodes.py first seen with mtime 1630117768.626848
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\multiprocessing\context.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\timeout.py first seen with mtime 1624235211.2142382
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\base_session.py first seen with mtime 1623163699.040418
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\distutils\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\exceptions.py first seen with mtime 1624235212.4304552
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\connectionpool.py first seen with mtime 1624235211.1517358
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\color.py first seen with mtime 1623163701.1889968
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\http\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\weakref.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\subprocess.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\pprint.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\getpass.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\idna\idnadata.py first seen with mtime 1624235210.7720375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\transaction.py first seen with mtime 1624766245.7355917
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\__future__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\parser.py first seen with mtime 1643971057.217805
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\_parseaddr.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\listable_api_resource.py first seen with mtime 1624766245.7185798
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\quoprimime.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loader_tags.py first seen with mtime 1623163701.4677494
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\tokens.py first seen with mtime 1623163696.4345632
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\creation.py first seen with mtime 1623163701.263705
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\asgiref\local.py first seen with mtime 1623163692.6468093
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\conf\urls\static.py first seen with mtime 1623163694.8676727
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\utils.py first seen with mtime 1623163701.294772
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\collections\abc.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\stripe_response.py first seen with mtime 1624766245.5219648
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loaders\base.py first seen with mtime 1623163701.4791417
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\invoice.py first seen with mtime 1624766245.5707538
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\types.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\math.py first seen with mtime 1623163701.3238258
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\__init__.py first seen with mtime 1623163701.225551
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\__init__.py first seen with mtime 1623163701.2760513
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\checks.py first seen with mtime 1623163697.485537
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\http\multipartparser.py first seen with mtime 1623163701.4440315
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\middleware.py first seen with mtime 1623163696.4297194
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\windows_utils.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\reporting\__init__.py first seen with mtime 1624766245.7405944
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\filters.py first seen with mtime 1643971057.20218
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\zipfile.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\distutils\version.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\uu.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\testcases.py first seen with mtime 1623163701.4963102
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\reindent.py first seen with mtime 1623163693.8746557
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\__init__.py first seen with mtime 1624766245.533047
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\_encoded_words.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\aliases.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\environ\fileaware_mapping.py first seen with mtime 1644305965.8289893
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\json\decoder.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\responders.py first seen with mtime 1630117769.2777963
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\base.py first seen with mtime 1623163701.4992454
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\security\sessions.py first seen with mtime 1623163701.1623702
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\gzip.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\payment_intent.py first seen with mtime 1624766245.6317904
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\sslproto.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\__init__.py first seen with mtime 1630117768.56046
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\recipient_transfer.py first seen with mtime 1624766245.6543527
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\renderers.py first seen with mtime 1623163701.345381
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\models.py first seen with mtime 1624235212.4304552
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\customer.py first seen with mtime 1624766245.559617
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\bitcoin_receiver.py first seen with mtime 1624766245.5486064
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\transaction.py first seen with mtime 1623163701.2245488
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\temp.py first seen with mtime 1623163701.1694932
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\certs.py first seen with mtime 1624235212.4148111
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\indexes.py first seen with mtime 1623163701.3035848
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\idna\core.py first seen with mtime 1624235210.756427
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\compat.py first seen with mtime 1624235212.4304552
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\migration.py first seen with mtime 1623163701.2825904
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\exceptions.py first seen with mtime 1623163701.1367283
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\http\response.py first seen with mtime 1623163701.4460328
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\encoding.py first seen with mtime 1623163701.521034
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\cache.py first seen with mtime 1623163701.4479926
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\views.py first seen with mtime 1623163701.126883
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\universaldetector.py first seen with mtime 1624235211.6248977
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\credit_note_line_item.py first seen with mtime 1624766245.5586152
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\timesince.py first seen with mtime 1623163701.5381322
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\finders.py first seen with mtime 1623163701.1222198
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\contrib\__init__.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\serializers\python.py first seen with mtime 1623163701.2187822
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\cli.py first seen with mtime 1623163693.8503878
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\state.py first seen with mtime 1623163701.287233
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\dis.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\tokenize.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\tz.py first seen with mtime 1623163701.4884224
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\base.py first seen with mtime 1623163701.5651436
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loaders\__init__.py first seen with mtime 1623163701.4781396
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\headerregistry.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\signals.py first seen with mtime 1623163701.49425
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\boundfield.py first seen with mtime 1623163701.340351
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\lexer.py first seen with mtime 1643971057.20218
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\views.py first seen with mtime 1623163697.4898536
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\defaultfilters.py first seen with mtime 1623163701.4615426
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\feedparser.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\handlers\wsgi.py first seen with mtime 1623163701.1767612
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loaders\filesystem.py first seen with mtime 1623163701.4818218
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\bz2.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\win32.py first seen with mtime 1643971055.1239922
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_bz2.pyd first seen with mtime 1613739380.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jsonfield\widgets.py first seen with mtime 1656625116.8971314
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\management\commands\__init__.py first seen with mtime 1623163701.1288843
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\files.py first seen with mtime 1623163701.3129892
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\debug.py first seen with mtime 1623163701.552097
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\checkout\session.py first seen with mtime 1624766245.7265851
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\sjisprober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\html.py first seen with mtime 1623163701.4911764
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\module_loading.py first seen with mtime 1623163701.533042
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\keywords.py first seen with mtime 1623163693.8566442
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\struct.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\__init__.py first seen with mtime 1623163701.498243
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\hashable.py first seen with mtime 1623163701.524036
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\plan.py first seen with mtime 1624766245.6417966
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\functools.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\apps\registry.py first seen with mtime 1623163694.3673766
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\mbcharsetprober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langthaimodel.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\views.py first seen with mtime 1657598589.9540606
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\inspect.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\signal.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\log.py first seen with mtime 1623163696.1963265
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\sql.py first seen with mtime 1623163701.189998
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\utils.py first seen with mtime 1624235212.446067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\hashers.py first seen with mtime 1623163696.4297194
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\request.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\models.py first seen with mtime 1623163701.344379
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\security.py first seen with mtime 1623163701.4551938
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\utils.py first seen with mtime 1623163701.225551
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\decorators\debug.py first seen with mtime 1623163701.5603657
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\utils.py first seen with mtime 1623163701.143543
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\__init__.py first seen with mtime 1623163701.3393486
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\media_types.py first seen with mtime 1630117769.2717934
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\os.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\uploadedfile.py first seen with mtime 1623163701.1694932
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\site.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ast.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\card_details.py first seen with mtime 1624766245.732589
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\checks.py first seen with mtime 1623163696.4247146
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\conf\locale\__init__.py first seen with mtime 1623163694.4203887
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\transfer.py first seen with mtime 1624766245.6801107
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\deconstruct.py first seen with mtime 1623163701.5169497
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\sigma\__init__.py first seen with mtime 1624766245.7435963
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\gb2312freq.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\wsgiref\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\keyword.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\opcode.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\__init__.py first seen with mtime 1623163701.5631413
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\base_tasks.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\storage.py first seen with mtime 1623163701.167492
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\webhook.py first seen with mtime 1624766245.5289695
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\minicompat.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\inspect.py first seen with mtime 1623163701.5270386
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\latin_1.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\euckrfreq.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\formats.py first seen with mtime 1623163701.5230353
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\contextlib.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\templates.py first seen with mtime 1623163701.1564295
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\markupsafe\__init__.py first seen with mtime 1643971056.7959092
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\line_item.py first seen with mtime 1624766245.617774
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\handlers\asgi.py first seen with mtime 1623163701.173759
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\three_d_secure.py first seen with mtime 1624766245.6761198
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\zeedah\__init__.py first seen with mtime 1656626262.0064924
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\admin_list.py first seen with mtime 1623163696.192336
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\backends\base.py first seen with mtime 1623163701.473753
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\exceptions.py first seen with mtime 1623163699.0412807
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\pytz\exceptions.py first seen with mtime 1623163692.8882575
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langrussianmodel.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\tree.py first seen with mtime 1623163701.5421348
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\constants.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\nturl2path.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\lookups.py first seen with mtime 1623163701.3045855
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\shortcuts.py first seen with mtime 1623163694.3653743
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_compat_pickle.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\extras.py first seen with mtime 1630117768.6312273
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\review.py first seen with mtime 1624766245.6603572
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ctypes\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\fields.py first seen with mtime 1623163701.3413517
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\re.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\enums.py first seen with mtime 1623163701.3018503
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\urllib\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\pickle.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\list.py first seen with mtime 1623163701.5702033
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\regex_helper.py first seen with mtime 1623163701.534721
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\codecs.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\request_metrics.py first seen with mtime 1624766245.5139592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\__init__.py first seen with mtime 1623163701.1189995
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\log.py first seen with mtime 1623163701.5310407
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\base.py first seen with mtime 1623163701.1879947
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\webhook_endpoint.py first seen with mtime 1624766245.6841135
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\initialise.py first seen with mtime 1643971055.0771196
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\backends\filebased.py first seen with mtime 1623163701.1475463
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\wsgiref\util.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\fields.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\engine\grouping.py first seen with mtime 1623163693.8666508
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\apps.py first seen with mtime 1623163699.039417
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\signals.py first seen with mtime 1623163696.433242
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\threading.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\win32\lib\pywin32_bootstrap.py first seen with mtime 1630539769.2228055
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\identity\verification_report.py first seen with mtime 1624766245.7285864
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\__init__.py first seen with mtime 1623163697.4835334
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\__init__.py first seen with mtime 1623163701.311988
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django_heroku\core.py first seen with mtime 1630117769.575765
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\admin.py first seen with mtime 1623163696.4204488
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\views\autocomplete.py first seen with mtime 1623163696.1977532
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\registry.py first seen with mtime 1623163701.1564295
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\translation\__init__.py first seen with mtime 1623163701.5444798
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\query.py first seen with mtime 1623163701.3337579
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\backends\base.py first seen with mtime 1623163699.0455933
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\log.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\euctwprober.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\right_margin.py first seen with mtime 1623163693.8756568
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\list_object.py first seen with mtime 1624766245.6207871
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\model_checks.py first seen with mtime 1623163701.1554275
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\asgiref\__init__.py first seen with mtime 1623163692.6442702
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\management\commands\runserver.py first seen with mtime 1623163701.1320393
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\selectors.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\decorators\common.py first seen with mtime 1623163701.5583546
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\events.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\utils.py first seen with mtime 1623163701.4973104
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\enums.py first seen with mtime 1624235211.5623953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\windows_events.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\models.py first seen with mtime 1623163699.0433078
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\conf.py first seen with mtime 1623163701.4992454
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\deletable_api_resource.py first seen with mtime 1624766245.7175791
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\dispute.py first seen with mtime 1624766245.7345903
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\backends\__init__.py first seen with mtime 1623163701.4727523
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\quopri.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\identity\verification_session.py first seen with mtime 1624766245.729587
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\cardholder.py first seen with mtime 1624766245.73359
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\six.py first seen with mtime 1624766245.516962
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\aggregates.py first seen with mtime 1623163701.2967727
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\utils.py first seen with mtime 1623163701.310986
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\engine\statement_splitter.py first seen with mtime 1623163693.868652
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\identity\__init__.py first seen with mtime 1624766245.7275858
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\base_futures.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\textwrap.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\mail\message.py first seen with mtime 1623163701.1789565
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\__init__.py first seen with mtime 1623163694.868435
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\mandate.py first seen with mtime 1624766245.6247857
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\output.py first seen with mtime 1623163693.8736556
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\person.py first seen with mtime 1624766245.6397953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\options.py first seen with mtime 1623163701.3065803
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\servers\basehttp.py first seen with mtime 1623163701.2230008
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\exceptions.py first seen with mtime 1623163701.278054
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\proxy.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\base.py first seen with mtime 1623163701.164372
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\base.py first seen with mtime 1623163701.4580283
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\signing.py first seen with mtime 1623163701.1402159
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\__init__.py first seen with mtime 1643971057.1396723
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\management\__init__.py first seen with mtime 1623163701.1871166
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\fields.py first seen with mtime 1623163697.4868503
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\urls.py first seen with mtime 1623163701.1590486
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\stringprep.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\decimal.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\version.py first seen with mtime 1624235211.6248977
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\_version.py first seen with mtime 1624235211.1517358
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\servers\__init__.py first seen with mtime 1623163701.2219987
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\related_lookups.py first seen with mtime 1623163701.319406
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\escprober.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\nested_resource_class_methods.py first seen with mtime 1624766245.7185798
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\winterm.py first seen with mtime 1643971055.1239922
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\test\runner.py first seen with mtime 1623163701.4921794
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\html\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\shutil.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\__init__.py first seen with mtime 1623163698.5631568
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\optimizer.py first seen with mtime 1643971057.217805
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\json\encoder.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\terminal\__init__.py first seen with mtime 1624766245.7848492
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuer_fraud_record.py first seen with mtime 1624766245.573752
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\async_case.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\middleware.py first seen with mtime 1623163699.0423052
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\introspection.py first seen with mtime 1623163701.2343946
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\mixins.py first seen with mtime 1623163701.3256578
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\sessions.py first seen with mtime 1624235212.446067
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\backends\__init__.py first seen with mtime 1623163699.0445912
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\engine\__init__.py first seen with mtime 1623163693.864649
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\aligned_indent.py first seen with mtime 1623163693.8716543
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\utf8prober.py first seen with mtime 1624235211.6248977
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\smartif.py first seen with mtime 1623163701.4707506
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\mixins.py first seen with mtime 1623163701.3154035
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\api_resource.py first seen with mtime 1624766245.6871154
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\createable_api_resource.py first seen with mtime 1624766245.7145772
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\base.py first seen with mtime 1630117769.263788
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_queue.pyd first seen with mtime 1613739380.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\authorization.py first seen with mtime 1624766245.7305877
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\crypto.py first seen with mtime 1623163701.511945
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\response.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\runtime.py first seen with mtime 1643971057.217805
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\_os.py first seen with mtime 1623163701.5048492
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\__init__.py first seen with mtime 1623163701.5490952
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\asgiref\sync.py first seen with mtime 1623163692.6504412
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\exceptions.py first seen with mtime 1623163694.8752675
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\oauth.py first seen with mtime 1624766245.466638
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\__init__.py first seen with mtime 1623163694.3633711
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\genericpath.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\messages.py first seen with mtime 1623163701.1543708
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\packages\six.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\move.py first seen with mtime 1623163701.1664913
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\idna.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\views\main.py first seen with mtime 1623163696.199756
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\card.py first seen with mtime 1624766245.7315884
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\caches.py first seen with mtime 1623163701.152169
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\setup_intent.py first seen with mtime 1624766245.6633577
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\__init__.py first seen with mtime 1623163701.483923
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1623163701.1238797
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\__init__.py first seen with mtime 1623163701.1633708
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\__init__.py first seen with mtime 1623163701.4561963
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_ssl.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\html\entities.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\uploadhandler.py first seen with mtime 1623163701.170494
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\static.py first seen with mtime 1623163701.554099
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\nonmultipart.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\codingstatemachine.py first seen with mtime 1624235211.5623953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\itercompat.py first seen with mtime 1623163701.5290394
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\packages\ssl_match_hostname\__init__.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\__init__.py first seen with mtime 1623163693.8477497
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\decorators\__init__.py first seen with mtime 1623163701.5555518
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\baseconv.py first seen with mtime 1623163701.509307
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\custom_method.py first seen with mtime 1624766245.7165785
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\traceback.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\ctypes\wintypes.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\cache\backends\locmem.py first seen with mtime 1623163701.149547
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\visitor.py first seen with mtime 1643971057.233432
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\stripe_object.py first seen with mtime 1624766245.519977
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\tax_id.py first seen with mtime 1624766245.6731405
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\static.py first seen with mtime 1623163701.4869263
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\exceptions.py first seen with mtime 1623163701.5020115
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\mime\message.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\handlers\base.py first seen with mtime 1623163701.17476
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\apps.py first seen with mtime 1623163694.8720424
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\heapq.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\ssltransport.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\billing_portal\__init__.py first seen with mtime 1624766245.723583
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\usage_record_summary.py first seen with mtime 1624766245.6831126
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\locks.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\async_checks.py first seen with mtime 1623163701.152169
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\idna\__init__.py first seen with mtime 1624235210.756427
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\poolmanager.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\signals.py first seen with mtime 1623163701.1392138
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\colorama\ansitowin32.py first seen with mtime 1643971055.0771196
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\pathlib.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\tempfile.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\hmac.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\product.py first seen with mtime 1624766245.6467998
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\calendar.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\introspection.py first seen with mtime 1623163701.265583
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\operations.py first seen with mtime 1623163701.2353964
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\terminal\connection_token.py first seen with mtime 1624766245.7878504
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\async_utils.py first seen with mtime 1643971057.155297
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\__init__.py first seen with mtime 1630117769.2597802
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langturkishmodel.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\subscription_schedule.py first seen with mtime 1624766245.6701124
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_markupbase.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\constants.py first seen with mtime 1623163701.2988393
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\topological_sort.py first seen with mtime 1623163701.5401335
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\models.py first seen with mtime 1623163694.878963
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_ctypes.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\subscription_item.py first seen with mtime 1624766245.6683612
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\header.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\urllib\request.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\__init__.py first seen with mtime 1623163694.8694375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\dispatch\__init__.py first seen with mtime 1623163701.3367515
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langgreekmodel.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\validators.py first seen with mtime 1623163696.4355657
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\detail.py first seen with mtime 1623163701.5681453
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\idtracking.py first seen with mtime 1643971057.20218
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\http\cookie.py first seen with mtime 1623163701.4420307
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\mail\__init__.py first seen with mtime 1623163701.1777618
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\linecache.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\importlib\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\contrib\_appengine_environ.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\sre_parse.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\password_validation.py first seen with mtime 1623163696.433242
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\utils.py first seen with mtime 1623163701.2285528
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\utils.py first seen with mtime 1623163701.287233
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\queue.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\file_link.py first seen with mtime 1624766245.569753
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\errors.py first seen with mtime 1630117768.6282227
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\management\__init__.py first seen with mtime 1623163697.6847675
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\token.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\context.py first seen with mtime 1623163701.4590304
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\signals.py first seen with mtime 1623163701.3095841
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\url.py first seen with mtime 1624235211.2142382
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\security\base.py first seen with mtime 1623163701.1613696
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\dispatch\dispatcher.py first seen with mtime 1623163701.337754
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\cookies.py first seen with mtime 1624235212.4304552
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\topup.py first seen with mtime 1624766245.6791072
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\escsm.py first seen with mtime 1624235211.578037
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\environment.py first seen with mtime 1643971057.1865542
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\connection.py first seen with mtime 1624235211.1517358
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\handlers\__init__.py first seen with mtime 1623163701.1727567
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\pkgutil.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\management\__init__.py first seen with mtime 1623163701.1278837
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\mixins.py first seen with mtime 1623163696.4312394
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\jisfreq.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_weakrefset.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\invoice_line_item.py first seen with mtime 1624766245.5727518
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\oauth_error.py first seen with mtime 1624766245.468639
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\sre_constants.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\staggered.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\base_user.py first seen with mtime 1623163696.423454
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\forms.py first seen with mtime 1623163701.3423529
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\setup_attempt.py first seen with mtime 1624766245.6613574
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\library.py first seen with mtime 1623163701.4657466
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\big5freq.py first seen with mtime 1624235211.5311425
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\client.py first seen with mtime 1623163701.2307935
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\constraints.py first seen with mtime 1623163701.2998471
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\argparse.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\promotion_code.py first seen with mtime 1624766245.6488016
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\encodings\utf_8.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\safestring.py first seen with mtime 1623163701.534721
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\signals.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\lorem_ipsum.py first seen with mtime 1623163701.5320418
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\gb2312prober.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\importlib\util.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\filepost.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\loaders\app_directories.py first seen with mtime 1623163701.4791417
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\result.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\utils.py first seen with mtime 1623163694.8985305
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\balance_transaction.py first seen with mtime 1624766245.5466
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\conf\global_settings.py first seen with mtime 1623163694.3707807
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\operations.py first seen with mtime 1623163701.2664304
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\_policybase.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\mimetypes.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\validation.py first seen with mtime 1623163701.237398
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\__init__.py first seen with mtime 1624235211.1517358
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\string_utils.py first seen with mtime 1630117769.2827954
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\apps.py first seen with mtime 1623163701.120002
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\base.py first seen with mtime 1623163701.2307935
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\options.py first seen with mtime 1623163694.8955271
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\order.py first seen with mtime 1624766245.627787
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_overlapped.pyd first seen with mtime 1613739380.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\format_helpers.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\storage\__init__.py first seen with mtime 1623163698.5697937
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\management\__init__.py first seen with mtime 1623163697.4635396
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\base.py first seen with mtime 1623163696.1953242
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\wsgi.py first seen with mtime 1623163701.1412165
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\common.py first seen with mtime 1623163701.4489927
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\usage_record.py first seen with mtime 1624766245.682112
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\tax_rate.py first seen with mtime 1624766245.6751208
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\templatetags\cache.py first seen with mtime 1623163701.484925
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\locale.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\multiprocessing\reduction.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\verify_mixin.py first seen with mtime 1624766245.7225819
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\related_descriptors.py first seen with mtime 1623163701.3184063
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\security\__init__.py first seen with mtime 1623163701.1603675
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\autoreload.py first seen with mtime 1623163701.457197
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\platform.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\query_utils.py first seen with mtime 1623163701.3085835
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\credit_note.py first seen with mtime 1624766245.5576143
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\charge.py first seen with mtime 1624766245.5536098
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_lzma.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\backends.py first seen with mtime 1623163696.4224496
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\warnings.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\views\generic\edit.py first seen with mtime 1623163701.5691464
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\cp949prober.py first seen with mtime 1624235211.5623953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\apps.py first seen with mtime 1623163697.4845355
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\urls\utils.py first seen with mtime 1623163701.5040143
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\apple_pay_domain.py first seen with mtime 1624766245.5420516
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\timezone.py first seen with mtime 1623163701.5391333
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\runners.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_sitebuiltins.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\sbcsgroupprober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\copyreg.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\fields\json.py first seen with mtime 1623163701.314401
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\json\scanner.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\order_return.py first seen with mtime 1624766245.6297927
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\__init__.py first seen with mtime 1624766245.3707483
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\updateable_api_resource.py first seen with mtime 1624766245.720581
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\coupon.py first seen with mtime 1624766245.5566142
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\exceptions.py first seen with mtime 1643971057.1865542
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\abstract\singleton_api_resource.py first seen with mtime 1624766245.7195804
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\special.py first seen with mtime 1623163701.2927701
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\ephemeral_key.py first seen with mtime 1624766245.563743
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\csrf.py first seen with mtime 1623163701.4499936
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\errors.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\bccache.py first seen with mtime 1643971057.155297
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\dom\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\__init__.py first seen with mtime 1623163701.321823
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\utils.py first seen with mtime 1623163701.3463817
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\json\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\forms.py first seen with mtime 1623163697.4878528
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\concurrent\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django_heroku\__init__.py first seen with mtime 1630117769.5697558
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\models.py first seen with mtime 1623163697.4888535
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\__init__.py first seen with mtime 1623163701.3286617
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\bdb.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\views.py first seen with mtime 1623163696.4365659
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\apps.py first seen with mtime 1656626288.3510807
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\futures.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\client.py first seen with mtime 1623163701.262964
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\__init__.py first seen with mtime 1623163693.8706536
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\big5prober.py first seen with mtime 1624235211.5311425
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\helpers.py first seen with mtime 1623163694.8782709
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\nodes.py first seen with mtime 1643971057.217805
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\termcolors.py first seen with mtime 1623163701.5357213
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\certifi\core.py first seen with mtime 1624235210.5063987
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\radar\value_list_item.py first seen with mtime 1624766245.7395937
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\login_link.py first seen with mtime 1624766245.6227844
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\utils.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\urllib\error.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\dateformat.py first seen with mtime 1623163701.5129476
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\numbers.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\reporting\report_type.py first seen with mtime 1624766245.742596
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\bank_account.py first seen with mtime 1624766245.5476058
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\__init__.py first seen with mtime 1623163701.2297914
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\base_subprocess.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\validators.py first seen with mtime 1623163701.1402159
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\base.py first seen with mtime 1623163701.2907686
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\filters\others.py first seen with mtime 1623163693.8726544
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\templatetags\__init__.py first seen with mtime 1623163696.1913335
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\typing.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\version.py first seen with mtime 1624766245.5269678
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\environ\compat.py first seen with mtime 1644305965.8269913
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\sigma\scheduled_query_run.py first seen with mtime 1624766245.7445972
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\markupsafe\_speedups.cp38-win_amd64.pyd first seen with mtime 1643971056.7959092
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\models.py first seen with mtime 1657232817.0153098
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\base.py first seen with mtime 1623163701.2619636
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\text.py first seen with mtime 1623163701.3266604
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\util.py first seen with mtime 1624766245.5249665
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\__init__.py first seen with mtime 1656626288.357084
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\jpcntx.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\apps.py first seen with mtime 1623163698.5650325
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\fnmatch.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jsonfield\__init__.py first seen with mtime 1656625116.8731153
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\pytz\tzinfo.py first seen with mtime 1623163692.8931344
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\signals.py first seen with mtime 1623163701.2275527
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\source.py first seen with mtime 1624766245.6643584
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\sbcharsetprober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\connection.py first seen with mtime 1623163701.5103092
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\urllib\response.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\checks\database.py first seen with mtime 1623163701.1531696
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\capability.py first seen with mtime 1624766245.551609
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\zeedah\urls.py first seen with mtime 1656626634.7369874
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\exceptions.py first seen with mtime 1623163701.4647465
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\logging\handlers.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\dj_database_url.py first seen with mtime 1630117768.9064412
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\utils.py first seen with mtime 1623163701.1258824
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\payment_method.py first seen with mtime 1624766245.6347919
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\duration.py first seen with mtime 1623163701.5200338
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\apps\config.py first seen with mtime 1623163694.366375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\exceptions.py first seen with mtime 1623163693.8533895
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\abc.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\packages\__init__.py first seen with mtime 1624235211.1829884
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\functional.py first seen with mtime 1623163701.524036
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\_internal_utils.py first seen with mtime 1624235212.4115918
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\dispute.py first seen with mtime 1624766245.5616152
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\payout.py first seen with mtime 1624766245.6377938
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\charsetgroupprober.py first seen with mtime 1624235211.5623953
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\codeop.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\transports.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\deprecation.py first seen with mtime 1623163701.5190313
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\case.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\base\schema.py first seen with mtime 1623163701.2363973
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\base_events.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_asyncio.pyd first seen with mtime 1613739380.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\difflib.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\bitcoin_transaction.py first seen with mtime 1624766245.5496192
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\views\__init__.py first seen with mtime 1623163696.1963265
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\langbulgarianmodel.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\http.py first seen with mtime 1623163701.5270386
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\_identifier.py first seen with mtime 1643971057.155297
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\suite.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jsonfield\fields.py first seen with mtime 1656625116.8741155
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\ddl_references.py first seen with mtime 1623163701.2265515
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\__init__.py first seen with mtime 1623163701.2897685
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\api.py first seen with mtime 1623163698.5641575
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\main.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\__init__.py first seen with mtime 1623163701.5048492
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\reprlib.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\retry.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\sites.py first seen with mtime 1623163694.8965292
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\asgiref\current_thread_executor.py first seen with mtime 1623163692.6468093
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\environ\environ.py first seen with mtime 1644305965.8279915
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\glob.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\pdb.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_compression.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\__init__.py first seen with mtime 1623163701.2609608
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\functions\datetime.py first seen with mtime 1623163701.3238258
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\_range.py first seen with mtime 1630117768.6248443
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\lzma.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\idna\package_data.py first seen with mtime 1624235210.7720375
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\hebrewprober.py first seen with mtime 1624235211.5936592
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\ssl_.py first seen with mtime 1624235211.1986144
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\subqueries.py first seen with mtime 1623163701.3347585
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\enum.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\contextvars.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\middleware.py first seen with mtime 1623163698.568038
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_requestor.py first seen with mtime 1624766245.371749
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\uuid.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\unittest\runner.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\event.py first seen with mtime 1624766245.566748
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\utils.py first seen with mtime 1643971057.233432
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\datastructures.py first seen with mtime 1623163701.3316636
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\__init__.py first seen with mtime 1623163696.4194481
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\urls.py first seen with mtime 1657678120.4660628
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\http\cookies.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\requests\hooks.py first seen with mtime 1624235212.4304552
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\decorators.py first seen with mtime 1623163694.8740432
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\subscription.py first seen with mtime 1624766245.6673603
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\forms\widgets.py first seen with mtime 1623163701.3474476
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\text.py first seen with mtime 1623163701.5371296
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\conf\urls\__init__.py first seen with mtime 1623163694.8656697
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\utils\version.py first seen with mtime 1623163701.5421348
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\http\__init__.py first seen with mtime 1623163701.4420307
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\operations\fields.py first seen with mtime 1623163701.29177
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\jinja2\defaults.py first seen with mtime 1643971057.1865542
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\backends\django.py first seen with mtime 1623163701.4750085
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\exchange_rate.py first seen with mtime 1624766245.5677483
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\chardistribution.py first seen with mtime 1624235211.5311425
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\error_object.py first seen with mtime 1624766245.5647464
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\alipay_account.py first seen with mtime 1624766245.540051
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\request.py first seen with mtime 1624235211.1673744
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\asyncio\tasks.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\concurrent\futures\thread.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\card.py first seen with mtime 1624766245.5526092
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\staticfiles\checks.py first seen with mtime 1623163701.1212173
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sites\shortcuts.py first seen with mtime 1623163699.5378084
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\chardet\mbcsgroupprober.py first seen with mtime 1624235211.609272
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\manager.py first seen with mtime 1623163701.305586
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\issuing\__init__.py first seen with mtime 1624766245.729587
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\where.py first seen with mtime 1623163701.3347585
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\urllib3\util\wait.py first seen with mtime 1624235211.2142382
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\__init__.py first seen with mtime 1624234902.2988667
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\_bootlocale.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\sqlparse\tokens.py first seen with mtime 1623163693.8616476
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\backends\postgresql\schema.py first seen with mtime 1623163701.267494
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\collections\__init__.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\terminal\location.py first seen with mtime 1624766245.7898517
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\message.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\core\files\images.py first seen with mtime 1623163701.1654892
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\email\generator.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\html\parser.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\datetime.py first seen with mtime 1613739326.0
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\psycopg2\_ipaddress.py first seen with mtime 1630117768.5644782
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\file.py first seen with mtime 1624766245.5687518
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\stripe\api_resources\balance.py first seen with mtime 1624766245.5450535
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core first seen with mtime 1657121444.9002175
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins first seen with mtime 1657121443.9499514
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\base.html first seen with mtime 1657677686.0409567
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\dash.html first seen with mtime 1657597619.0626001
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\edit-profile.html first seen with mtime 1657121443.956954
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\index.html first seen with mtime 1655930300.0379093
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\login.html first seen with mtime 1657235490.1382842
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\navbar.html first seen with mtime 1657121443.9631793
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\payment.html first seen with mtime 1657121444.898216
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\profile.html first seen with mtime 1657121444.8992174
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\success.html first seen with mtime 1656195655.7385838
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\transaction.html first seen with mtime 1657121444.9012187
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\customers.html first seen with mtime 1657121443.9186442
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\edit_merchant.html first seen with mtime 1657121443.9256494
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\homepage.html first seen with mtime 1657121443.9349992
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\merchants.html first seen with mtime 1657121443.9451396
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\transactions.html first seen with mtime 1657121443.9471433
+[13/Jul/2022 04:47:44] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\admins\users.html first seen with mtime 1657121443.9499514
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\model.py first seen with mtime 1624235214.4961703
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1623163697.4718575
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1623163695.3492222
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1623163697.4728596
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1623163697.476861
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1623163697.4758606
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\_util.py first seen with mtime 1624234902.3457456
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0005_transaction_price.py first seen with mtime 1657121443.7212038
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1623163695.3512633
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1623163697.47486
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\zeedah\wsgi.py first seen with mtime 1656626262.0054913
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0006_cardtransactions.py first seen with mtime 1657232869.0061407
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\graph.py first seen with mtime 1623163701.28063
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0003_alter_transaction_merchant.py first seen with mtime 1657121443.7192025
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1623163697.688979
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\models\sql\compiler.py first seen with mtime 1623163701.3296623
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1623163697.4698596
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\etree\__init__.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1623163697.4778614
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1623163695.3502252
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\__init__.py first seen with mtime 1624235214.4649322
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\api.py first seen with mtime 1624235214.4805446
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1623163697.467855
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1623163699.5175343
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\etree\ElementPath.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\ImageMode.py first seen with mtime 1624234902.2051122
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\_elementtree.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1623163697.6877697
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\DLLs\pyexpat.pyd first seen with mtime 1613739382.0
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1623163697.4728596
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\_binary.py first seen with mtime 1624234902.2988667
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1623163697.4738593
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1623163697.467855
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1623163697.4789174
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Program Files\Python\Python38\Lib\xml\etree\ElementTree.py first seen with mtime 1613739328.0
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0001_initial.py first seen with mtime 1657121443.7162006
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1623163695.3512633
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0002_alter_customer_phone.py first seen with mtime 1657121443.7172017
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1623163699.0484502
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\lock.py first seen with mtime 1624235214.4805446
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\cffi\error.py first seen with mtime 1624235214.4805446
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\recorder.py first seen with mtime 1623163701.2852297
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\_imaging.cp38-win_amd64.pyd first seen with mtime 1624234902.3301196
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1623163697.688979
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\_version.py first seen with mtime 1624234902.3457456
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\0004_auto_20220703_2228.py first seen with mtime 1657121443.7202036
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\loader.py first seen with mtime 1623163701.281587
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\compress.py first seen with mtime 1630117769.2667885
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\whitenoise\storage.py first seen with mtime 1630117769.2807937
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\db\migrations\executor.py first seen with mtime 1623163701.2796276
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\TiffTags.py first seen with mtime 1624234902.283254
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\middleware\clickjacking.py first seen with mtime 1623163701.4479926
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\PIL\Image.py first seen with mtime 1624234902.189486
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\migrations\__init__.py first seen with mtime 1656626288.3590858
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1623163697.4708579
+[13/Jul/2022 04:47:45] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1623163699.5167248
+[13/Jul/2022 04:47:50] INFO [django.server:161] "GET / HTTP/1.1" 200 6875
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1623163699.0433078
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1623163698.5733385
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1623163698.572335
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1623163698.567036
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\template\context_processors.py first seen with mtime 1623163701.4605403
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1623163698.5713346
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1623163698.5733385
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\messages\utils.py first seen with mtime 1623163698.5687919
+[13/Jul/2022 04:47:50] DEBUG [django.utils.autoreload:379] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1623163696.4267178
+[13/Jul/2022 04:48:00] INFO [django.server:161] "POST / HTTP/1.1" 200 7471
+[13/Jul/2022 04:49:34] DEBUG [django.utils.autoreload:382] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\login.html previous mtime: 1657235490.1382842, current mtime: 1657684173.796971
+[13/Jul/2022 04:49:34] DEBUG [django.utils.autoreload:356] C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\login.html notified as changed. Signal results: [(<function template_changed at 0x0000002130C4C1F0>, True), (<function translation_file_changed at 0x00000021317B35E0>, None)].
+[13/Jul/2022 04:49:39] INFO [django.server:161] "GET / HTTP/1.1" 200 6875
+[13/Jul/2022 04:49:44] INFO [django.server:161] "POST / HTTP/1.1" 200 7471
+[13/Jul/2022 04:50:03] DEBUG [django.utils.autoreload:382] File C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\login.html previous mtime: 1657684173.796971, current mtime: 1657684202.6493883
+[13/Jul/2022 04:50:03] DEBUG [django.utils.autoreload:356] C:\Users\Hayeenday\Desktop\ISMAIL STUFFS\Practice Files\My Projects\zeedah\core\templates\core\login.html notified as changed. Signal results: [(<function template_changed at 0x0000002130C4C1F0>, True), (<function translation_file_changed at 0x00000021317B35E0>, None)].
+[13/Jul/2022 04:50:06] INFO [django.server:161] "GET / HTTP/1.1" 200 6869
+[13/Jul/2022 04:50:10] INFO [django.server:161] "POST / HTTP/1.1" 200 7305
