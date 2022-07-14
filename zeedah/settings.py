@@ -56,10 +56,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'django_heroku',
     'core',
-    'storages',
-    'boto',
 ]
 
 MIDDLEWARE = [
@@ -218,9 +218,17 @@ LOGGING = {
 
 # Amazon s3 aws cloud bucket settings
 if not DEBUG:
-   AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
-   AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-   AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-   STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-   S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-   STATIC_URL = S3_URL
+    
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': env('CLOUD_NAME'),
+        'API_KEY': env('API_KEY'),
+        'API_SECRET': env('API_SECRET'),
+    }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+#    AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+#    AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+#    AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+#    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+#    STATIC_URL = S3_URL
