@@ -64,14 +64,14 @@ class ProfileView(LoginRequiredMixin,generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
         form = ChangePinForm()
-        context = {'form':form}
+        context = {'form':form,'error':False}
         context['customer'] = Customer.objects.get(user=self.request.user)
         return render(self.request,self.template_name,context=context)
     
     def post(self,*args,**kwargs):
         customer = Customer.objects.get(user=self.request.user)
         form = ChangePinForm(self.request.POST)
-        context = {'form':form}
+        context = {'form':form,'error':False}
         context['customer'] = Customer.objects.get(user=self.request.user)
 
         if form.is_valid():
@@ -96,7 +96,9 @@ class DashboardView(LoginRequiredMixin,generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
         form = PinPurchaseForm()
-        context ={'form':form}
+        context ={'form':form,'error':False}
+        customer = get_object_or_404(Customer,user=self.request.user)
+        context['balance'] = customer.balance
         context['stripe'] = settings.STRIPE_PK
         context['items']=Merchant.objects.all()
         return render(self.request,self.template_name,context=context)
@@ -107,7 +109,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
         
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
-        context = {'items':Merchant.objects.all(),'form':form}
+        context = {'items':Merchant.objects.all(),'form':form,'error':False}
 
         if self.request.POST.get('form-name') == 'pin-form':
             if form.is_valid():

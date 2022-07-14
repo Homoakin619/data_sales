@@ -103,7 +103,7 @@ class ChangePinForm(forms.Form):
 class PinPurchaseForm(forms.Form):
     pin = forms.IntegerField(widget=forms.NumberInput(attrs={"type":"password", "class":"form-control","id":"pin","name":"pin","placeholder":"Enter PIN"}))
     beneficiary = forms.IntegerField(required=False,widget=forms.NumberInput(attrs={"class":"form-control","name":"beneficiary","placeholder":"Enter Beneficiary"}))
-    amounts = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
+    amounts = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','hidden':True}))
 
     def clean_pin(self):
         pin = str(self.cleaned_data['pin'])
