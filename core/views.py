@@ -202,7 +202,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
 
 class FundWalletView(generic.View):
     template_name = 'core/payment.html'
-    def get(self,request,*args,**kwargs):
+    def get(self,*args,**kwargs):
         
         return render(self.request,self.template_name,{'stripe': settings.STRIPE_PK})
 
@@ -226,8 +226,9 @@ class FundWalletView(generic.View):
             print('Code is: %s' % e.code)
             # param is '' in this case
             print('Param is: %s' % e.param)
-            print('Message is: %s' % e.user_message)
-            raise ValidationError(e)
+            messages.warning(self.request,'%s' % e.user_message)
+            return self.get(*args,**kwargs)
+            # raise ValidationError(e)
         except stripe.error.RateLimitError as e:
         # Too many requests made to the API too quickly
             raise ValidationError(e)
