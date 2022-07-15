@@ -1,4 +1,4 @@
 .env
-core/txt-str.py
-.pyc
-.log
+txt-str.py
+*.pyc
+mysite.log

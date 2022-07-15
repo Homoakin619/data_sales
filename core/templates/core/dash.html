@@ -2,41 +2,47 @@
 {% load static %}
 {% block content %}
 
-<div class="container mt-3" >
-
-    <div class="row gx-3 gy-3 pt-2 ">
-        {% for item in items %}
-        <div class="col-sm-2 card me-4 shadow">
-            <img class="img-fluid mx-auto" src="{{ item.logo.url }}"  height="120"></img>
-            <div class="card-body">
-                <table>
-                    <tbody>
-                        {% for network,price in item.get_item_price %}
-                        <tr>
-                            <td>
-                                <a href="{% url 'transact' %}" quantity='{{ network }}' name='{{ item.title }}' class="btn btn-sm btn-danger me-3" data-bs-toggle="modal" 
-                                {% if balance < 350 %} data-bs-target="#paymentModal" {% else %} data-bs-target="#pinModal" {% endif %} data-bs-value="{{ price }}" role="button" >
-                                    {{ network }}
-                                </a>
-                            </td>
-                            <td><a class="btn btn-sm btn-danger ms-3 disabled">{{ price }}</a></td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                
-            </div>
-        </div>
-        {% endfor %}
+<main class="row overflow-auto me-2 gx-1 gy-1 pt-2">
+  
+  {% for item in items %}
+  <div class="col-md-3">
+    <div class="card me-4 shadow">
+      <img class="img-fluid  " src="{{ item.logo.url }}"  height="120"></img>
+      <div class="card-body">
+          <table class="mx-auto d-block">
+              <tbody>
+                  {% for network,price in item.get_item_price %}
+                  <tr>
+                      <td>
+                          <a quantity='{{ network }}' name='{{ item.title }}' class="btn btn-sm btn-danger me-3" data-bs-toggle="modal" 
+                          {% if balance < 350 %} data-bs-target="#paymentModal" {% else %} data-bs-target="#pinModal" {% endif %} data-bs-value="{{ price }}" role="button" >
+                              {{ network }}
+                          </a>
+                      </td>
+                      <td><a class="btn btn-sm btn-danger ms-3 disabled">{{ price }}</a></td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+          
+      </div>
     </div>
+  </div>
+  {% endfor %}
+</main>
 
+<div class="row gx-3 gy-3 pt-2 ">
+  {% for item in items %}
+  
+  {% endfor %}
 </div>
+
 
 <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="paymentModalLabel">Card Payment</h5>
+          <h5 class="modal-title" id="paymentModalLabel">Fund Wallet</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -51,16 +57,15 @@
                   <!-- A Stripe Element will be inserted here. -->
                 </div>
                 
-                  <!-- <label for="amount">Amount :</label> -->
-                  <input class="form-control" type="text" name="amount" id="amount" hidden>
+                <div class="mt-2">
+                  <input class="form-control border border-info" type="text" name="amount" id="amount" placeholder="Enter amount to Fund">
                   <input type="text" name="form-name" value="card-form" hidden>
-                
+                </div>
                 <!-- Used to display Element errors. -->
                 <div id="card-errors" role="alert"></div>
               </div>
-              <div class="d-grid gap-2 d-md-block">
-                  <!-- <input type="submit" class="btn btn-info" value="Submit Payment"> -->
-                <button class="btn btn-info btn-block mt-2" >Submit Payment</button>
+              <div class="d-grid mt-2">  
+                <button class="btn btn-info " >Submit Payment</button>
               </div>
           </form>
           <div class="modal-footer">
@@ -237,14 +242,9 @@ var style = {
     // If necessary, you could initiate an AJAX request here
     // and then do the updating in a callback.
     var balance = button.getAttribute('balance')
-    console.log(balance)
-    console.log(price)
     // Update the modal's content.
     // var modalTitle = paymentModal.querySelector('.modal-title')
-    var modalBodyInput = paymentModal.querySelector(".modal-body input[name='amount']")
-  
-    // modalBodyInput.value = price
-    document.querySelector("input[name='amount']").value = price
+    
   })
 
 

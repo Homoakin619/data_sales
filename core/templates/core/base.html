@@ -1,4 +1,5 @@
 {% load static %}
+{% load balance %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,26 +7,34 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
         <script src="{% static 'js/jquery.min.js' %}"></script>
+        <style>
+          /* this is needed to make the content scrollable on larger screens */
+          @media (min-width: 576px) {
+              .h-sm-100 {
+                  height: 100%;
+              }
+          }
+          @media screen and (min-width: 1092px) {
+            #wid {
+              width: 220px;
+            }
+          }
+        </style>
+        {% block style %} 
+
+        {% endblock style %}
         {% block script %} 
 
         {% endblock script %}
         
-        <script type="text/javascript">
-          // function price(){
-          //   alert('hello')
-          //   var balance = document.querySelector('.balance').value
-          //   console.log(balance)
-          //   alert(balance)
-          //   }
 
-          //   window.onload = price()
-        </script>
     </head>
     
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="bootstrap" viewBox="0 0 118 94">
               <title>Bootstrap</title>
+
               <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
             </symbol>
             <symbol id="home" viewBox="0 0 16 16">
@@ -80,15 +89,56 @@
             <symbol id="geo-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
             </symbol>
+
+            <symbol id="person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </symbol>
+            <symbol id="people" viewBox="0 0 16 16">
+              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+            </symbol>
+
+            <symbol id="currency" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+              <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+              <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+              <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+            </symbol>
+            
+
           </svg>
-        <main>
+         
+        
+
+      <div class="container-fluid overflow-hidden">
+        <div class="row vh-100 overflow-auto">
             {% include 'core/navbar.html' %}
-            <div class="container mt-2 ms-4" >
-              {% block content %} 
+
+            <div class="col d-flex flex-column h-sm-100">
+              {% if request.user.is_authenticated %}
+                {% if not request.user.is_staff %}
+                <ul class="list-inline ms-auto">
+                  <li class="list-inline-item px-sm-0 m-0">
+                    <a class="nav-link">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#currency"/></svg>
+                      <span class=" ms-1 d-sm-inline">{{ request.user|get_balance }} </span></a>
+                  </li> 
+                  <li class="list-inline-item px-sm-0 m-0">
+                    |
+                  </li>
+                  <li class="list-inline-item px-sm-0 m-0">
+                    <a href="{% url 'fund' %}" class="nav-link">Fund Wallet</a>
+                  </li>
+                </ul>
+                  
+                  
+                {% endif %}
+              {% endif %}
+              {% block content %}
 
               {% endblock %}
-            </div>  
-        </main>
+            </div>
+        </div>  
+      </div>
     </body>
     
     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>

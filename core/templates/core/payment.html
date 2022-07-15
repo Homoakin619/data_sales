@@ -1,50 +1,115 @@
 {% extends 'core/base.html' %}
+{% block style %} 
+<style>
+  html,
+  body {
+      height: 100%;
+      }
 
+  body {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+      }
+  @media screen and (min-width:575px) {
+      .pay-anchor {
+              width: 100%;
+              max-width: 450px;
+              padding: 15px;
+              margin: auto;
+              }
+  }
+  
+
+</style>
+{% endblock style %}
 {% block content %}
-this key = {{ stripe }}
-<h4>Payment </h4>
 
-<form method="post" id="payment-form">
-  {% csrf_token %}
-  <div class="form-row">
-    <label for="card-element">
-      Credit or debit card
-    </label>
-    <div id="card-element">
-      <!-- A Stripe Element will be inserted here. -->
+<main class="row overflow-auto me-2 gx-1 gy-1 pt-2">
+  <div class="col pay-anchor">
+    <div class="card">
+      <h4 class="card-header">Fund Wallet </h4>
+      <div class="card-body">
+        <form method="post" id="payment-form">
+          {% csrf_token %}
+          <div class="form-row">
+            <label for="card-element">
+              Credit or debit card
+            </label>
+            <div id="card-element">
+              <!-- A Stripe Element will be inserted here. -->
+            </div>
+            <div class="mt-2">
+              <input class="form-control border border-secondary" type="text" name="amount" placeholder="Enter amount to Fund">
+            </div>
+            <!-- Used to display Element errors. -->
+            <div id="card-errors" role="alert"></div>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-secondary mt-2">Submit Payment</button>
+          </div>
+          
+        </form>
+      </div>
     </div>
-    <div>
-      <label for="amount">Price</label>
-      <input type="text" name="amount" id="amount">
-    </div>
-    <!-- Used to display Element errors. -->
-    <div id="card-errors" role="alert"></div>
+    
+    
   </div>
-
-  <button>Submit Payment</button>
-</form>
-
+</main>
 
 
 {% endblock %}
 
-{% block script %} 
+{% block extra_script %} 
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
     var stripe = Stripe('{{ stripe }}');
     var elements = stripe.elements();
+    var style = {
+        base: {
+          // Add your base input styles here. For example:
+          fontSize: '16px',
+          color: '#32325d',
+        },
+      };
 
+    var card = elements.create('card', {style: style});
+  
+    // Add an instance of the card Element into the `card-element` <div>.
+    card.mount('#card-element');
+
+  // Create a token or display an error when the form is submitted.
+    var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          stripe.createToken(card).then(function(result) {
+            if (result.error) {
+              // Inform the customer that there was an error.
+              var errorElement = document.getElementById('card-errors');
+              errorElement.textContent = result.error.message;
+            } else {
+              // Send the token to your server.
+              stripeTokenHandler(result.token);
+            }
+          });
+        });
+
+
+    function stripeTokenHandler(token) {
+        // Insert the token ID into the form so it gets submitted to the server
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
+
+        // Submit the form
+        form.submit();
+    }
 </script>
-{% endblock script %}
-<!-- <form id="payment-form" >
-  
-    <div id="card-element"> -->
-      <!-- Elements will create input elements here -->
-    <!-- </div> -->
-  
-    <!-- We'll put the error messages in this element -->
-    <!-- <div id="card-errors" role="alert"></div>
-  
-    <button id="submit">Submit Payment</button>
-  </form> -->
+{% endblock extra_script %}

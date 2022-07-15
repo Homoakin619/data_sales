@@ -64,7 +64,7 @@ class ProfileView(LoginRequiredMixin,generic.View):
     template_name = 'core/profile.html'
     def get(self,*args,**kwargs):
         form = ChangePinForm()
-        context = {'form':form,'error':False}
+        context = {'form':form,'error':False,'profile':True}
         context['customer'] = Customer.objects.get(user=self.request.user)
         return render(self.request,self.template_name,context=context)
     
@@ -96,7 +96,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
     template_name = 'core/dash.html'
     def get(self,*args,**kwargs):
         form = PinPurchaseForm()
-        context ={'form':form,'error':False}
+        context ={'form':form,'error':False,'dashboard':True}
         customer = get_object_or_404(Customer,user=self.request.user)
         context['balance'] = customer.balance
         context['stripe'] = settings.STRIPE_PK
@@ -200,25 +200,21 @@ class DashboardView(LoginRequiredMixin,generic.View):
 
 
 
-class TransactionView(generic.View):
+class FundWalletView(generic.View):
     template_name = 'core/payment.html'
     def get(self,request,*args,**kwargs):
-        intent = stripe.PaymentIntent.create(
-            amount=1099,
-            currency='usd',
-            # Verify your integration in this guide by including this parameter
-            metadata={'integration_check': 'accept_a_payment'},
-            )
-        context = {'client_secret':intent.client_secret }
-
-        return render(self.request,self.template_name)
+        
+        return render(self.request,self.template_name,{'stripe': settings.STRIPE_PK})
 
     def post(self,request,*args,**kwargs):
-        amount =  request.POST.get('amount')
-        token = request.POST.get('stripeToken')
+        amount = int(self.request.POST.get('amount'))
+        token = self.request.POST.get('stripeToken')
+        user = self.request.user
+        customer = get_object_or_404(Customer,user=user)
+        
         try:
             charge = stripe.Charge.create(
-                amount=amount*1000,
+                amount=amount*100,
                 currency='usd',
                 description='Example charged card',
                 source=token,
@@ -231,12 +227,13 @@ class TransactionView(generic.View):
             # param is '' in this case
             print('Param is: %s' % e.param)
             print('Message is: %s' % e.user_message)
+            raise ValidationError(e)
         except stripe.error.RateLimitError as e:
         # Too many requests made to the API too quickly
-            pass
+            raise ValidationError(e)
         except stripe.error.InvalidRequestError as e:
         # Invalid parameters were supplied to Stripe's API
-            pass
+            raise ValidationError("there is an error at %s" %e.param)
         except stripe.error.AuthenticationError as e:
         # Authentication with Stripe's API failed
         # (maybe you changed API keys recently)
@@ -244,14 +241,22 @@ class TransactionView(generic.View):
         except stripe.error.APIConnectionError as e:
         # Network communication with Stripe failed
             print(e)
+            raise ValidationError(e)
         except stripe.error.StripeError as e:
         # Display a very generic error to the user, and maybe send
         # yourself an email
-            pass
-
+        #     messages.error(self.request,'Your PIN is incorrect!')
+            raise ValidationError(e)
         except Exception as e:
         # Something else happened, completely unrelated to Stripe
-            print(e)
+            raise ValidationError(e)
+
+        user = get_object_or_404(User,username=self.request.user.username)
+        transaction = CardTransactions.objects.create(transaction_id=charge.id,user=user,successful=True,amount=amount)
+        transaction.save()
+        balance = customer.balance
+        customer.balance = balance + amount
+        customer.save()
         return HttpResponseRedirect(reverse('success'))
 
 
@@ -269,7 +274,7 @@ class TransactionHistoryView(LoginRequiredMixin,generic.View):
     template_name = 'core/transaction.html'
     def get(self,*args,**kwargs):
         transactions = Transaction.objects.filter(user=self.request.user).order_by('-id')
-        context = {'transactions':enumerate(transactions,start=1)}
+        context = {'transactions':enumerate(transactions,start=1),'transaction':True}
         return render(self.request,self.template_name,context=context)
 
 
@@ -283,7 +288,7 @@ class AdminHomepage(LoginRequiredMixin,generic.View):
 class AdminTransactions(LoginRequiredMixin,generic.View):
     template_name = 'core/admins/transactions.html'
     def get(self,*args,**kwargs):
-        context = {'transactions':enumerate(Transaction.objects.all().order_by('-id'),start=1)}
+        context = {'transactions':enumerate(Transaction.objects.all().order_by('-id'),start=1),'transaction':True}
         return render(self.request,self.template_name,context=context)
 
 class AdminListUsers(LoginRequiredMixin,generic.ListView):
@@ -293,13 +298,18 @@ class AdminListUsers(LoginRequiredMixin,generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        
+        context['users'] = True
         return context
 
 class AdminListMerchants(LoginRequiredMixin,generic.ListView):
     model = Merchant
     template_name = 'core/admins/merchants.html'
     context_object_name = 'merchants'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['merchant'] = True
+        return context
     
 
 class AdminEditMerchant(LoginRequiredMixin,generic.View):
