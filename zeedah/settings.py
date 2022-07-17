@@ -62,8 +62,6 @@ INSTALLED_APPS = [
     'django_heroku',
     'core',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
 ]
 
 MIDDLEWARE = [
