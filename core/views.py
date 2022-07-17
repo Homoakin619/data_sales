@@ -430,6 +430,7 @@ def activate(request,activation_key):
             user = customer.user
             user.is_active = True
             user.save()
+            customer.verified = True
             customer.save()
             return HttpResponseRedirect(reverse('login_page'))
     return render(request,'core/activation.html')

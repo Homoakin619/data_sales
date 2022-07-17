@@ -1,6 +1,23 @@
 from django.contrib import admin
+from django.contrib.admin.apps import AdminConfig
+
+from django.contrib.admin import options
 
 from .models import Customer,Card,Merchant,Transaction,CardTransactions
+
+
+
+
+class MyAdmin(admin.AdminSite):
+	subtitle = 'mysub'
+	site_header = 'Zeedah Data Administration'
+	# def each_context(self, request):
+	# 	context = super().each_context(request)
+	# 	context['subtitle'] = self.subtitle
+	# 	context['site_header'] = self.site_header
+	# 	return context
+	
+# admin_site = MyAdmin()
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):

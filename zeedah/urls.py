@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+# from core.admin import admin_site
+
+admin.site.site_header = 'Zeedah Data Admin'
+admin.site.site_title = 'Zeedah Data Admin'
+admin.site.index_title = 'Zeedah Data Administration'
+admin.site.subtitle = ''
+admin.empty_value_display = ''
 
 urlpatterns = [
+    # path('admin/', admin_site.urls),
     path('admin/', admin.site.urls),
     path('',include('core.urls')),
 ]
