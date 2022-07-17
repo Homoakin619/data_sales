@@ -8,7 +8,6 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import authenticate
 
 import json
-from validate_email import validate_email as validator
 
 
 from .models import Customer,Merchant
@@ -56,8 +55,6 @@ class CustomerForm(UserCreationForm):
         new = User.objects.filter(email=email)
         if new.count():
             raise ValidationError('Email Exists!')
-        if validator(email) is not True:
-            raise ValidationError('Email does not exist! Enter a valid email')
         return email
     
     def clean_phone(self):
