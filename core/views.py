@@ -397,26 +397,24 @@ class IndexView(generic.View):
             if form.is_valid():
                 username = form.cleaned_data['username']
                 password = form.cleaned_data['password1']
-                phone = form.cleaned_data['phone']
                 email = form.cleaned_data['email']
                 activation_key = get_activation_key()
                 form.save()
-                new_user = authenticate(username=username,password=password) 
                 user = User.objects.get(username=username)
                 customer = Customer.objects.get(user=user)
                 customer.activation_key = activation_key
                 customer.save()
                 subject = 'Zeedah Account Verification'
-                body = f'Hi {username} \n Please click on the link below to confirm your registration \n http://localhost:8000/activate/{activation_key}'
+                body = f'Hi {username} \n Please click on the link below to confirm your registration \n http://zeedah.herokuapp.com/activate/{activation_key}'
                 sender = 'zeedah@gmail.com'
                 with mail.get_connection() as connection:
                     mail.EmailMessage(
                         subject, body, sender, [email],
                         connection=connection,
                     ).send()
-                    
                 messages.success(self.request,'Kindly Check Your Email for link to activate your account')
-                return render(self.request,self.template_name,context=context)
+
+                return self.get(*args,**kwargs)
             else:
                 context = {'form':form,'disp':True,'errors':form.errors}
                 return render(self.request,self.template_name,context=context)

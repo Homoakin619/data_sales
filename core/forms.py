@@ -30,7 +30,7 @@ class LoginForm(forms.Form):
         return username
     def clean(self):
         username = self.cleaned_data['username']
-        password= self.cleaned_data['password']
+        password = self.cleaned_data['password']
         if not authenticate(username=username,password=password):
             raise ValidationError('Details do not match!')
         return self.cleaned_data
