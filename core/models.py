@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 
-import jsonfield
+from django_jsonfield_backport.models import JSONField
 import random
 import string
 import json
@@ -28,7 +28,7 @@ DATA_QTY = (
 class Merchant(models.Model):
 	logo = models.ImageField(null=True,blank=True)
 	title = models.CharField(max_length=10,null=True)
-	data_price = jsonfield.JSONField()
+	data_price = JSONField()
 
 	def __str__(self):
 		return self.title

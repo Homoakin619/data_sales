@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'django_heroku',
     'core',
     'django.contrib.sites',
+    "django_jsonfield_backport",
 ]
 
 MIDDLEWARE = [
