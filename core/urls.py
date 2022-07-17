@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path,re_path
 
 from . import views
 
@@ -20,8 +20,8 @@ urlpatterns = [
 		path('admins/backend/merchants/',views.AdminListMerchants.as_view(),name='merchants'),
 		path('admins/backend/edit_merchant/<int:id>/',views.AdminEditMerchant.as_view(),name='edit_merchant'),
 		# path('admins/backend/edit_customer/<int:id>/',views.AdminEditCustomer.as_view(),name='edit_customer'),
-		
-		
+
+		re_path(r'^activate/(?P<activation_key>.+)$', views.activate,name='activate'),
 		path('success/',views.success,name='success'),
 		path('',views.IndexView.as_view(),name='login_page')
 		

@@ -104,14 +104,29 @@
     </head>
     
     <body>
- 
+        
         <main class="login-form" {% if disp %} style="display: none;" {% else %}  {% endif %}>
+          {% if messages %}
+        <div class="col">  
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div>
+              <p>{{ message }}</p>
+            </div>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </div>
+      {% endif %}
             <form method="POST">
                 {% csrf_token %}
               
               <h1 class="h3 mb-3 fw-normal">Sign In</h1>
               
-        
+              {% for error in login_form.non_field_errors %}
+              <p class="text-danger">{{ error }}</p>
+              {% endfor %}
 
               <div class="form-floating">
                 {{ login_form.username }}
@@ -119,7 +134,7 @@
               </div>
               
               {% for error in login_form.username.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
               <div class="form-floating">
@@ -128,7 +143,7 @@
               </div>
 
               {% for error in login_form.password.errors %}
-                <p style="color: red;">{{ error }}</p>
+                <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
               <input type="text" name="login" value="login" hidden>
@@ -155,7 +170,7 @@
               </div>
 
               {% for error in form.username.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
               <div class="form-floating">
@@ -164,7 +179,7 @@
               </div>
 
               {% for error in form.password1.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
               <div class="form-floating">
@@ -172,7 +187,7 @@
                 <label for="floatingPassword1">Confirm Password</label>
               </div>
               {% for error in form.password2.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
 
@@ -181,7 +196,7 @@
                 <label for="floatingInput">Email</label>
               </div>
               {% for error in form.email.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
 
@@ -190,7 +205,7 @@
                 <label for="floatingPassword">Phone</label>
               </div>
               {% for error in form.phone.errors %}
-                <p style="color: red;">{{ error }}</p>
+              <p class="text-danger">{{ error }}</p>
               {% endfor %}
 
               <input type="text" name="signup" value="signup" hidden>

@@ -57,7 +57,19 @@
               <!-- A Stripe Element will be inserted here. -->
             </div>
             <div class="mt-2">
-              <input class="form-control border border-secondary" type="text" name="amount" placeholder="Enter amount to Fund">
+              
+              
+              {{ form.amount }}
+              {% for error in form.amount.errors %} 
+              <p class="text-danger">{{ error }}</p>
+              {% endfor %}
+            </div>
+            <div class="mt-2">
+              {{ form.pin }}
+              <!-- <input class="form-control border border-secondary" type="text" name="amount" placeholder="Enter amount to Fund"> -->
+              {% for error in form.pin.errors %} 
+              <p class="text-danger">{{ error }}</p>
+              {% endfor %}
             </div>
             <!-- Used to display Element errors. -->
             <div id="card-errors" role="alert"></div>

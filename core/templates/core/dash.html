@@ -138,13 +138,13 @@
 <!-- <script src="{% static 'js/myscript.js' %}"></script> -->
 
 <script>
-  var stripe = Stripe('{{ stripe }}');
-  var elements = stripe.elements();
-  // var pay_form = $('#payment-form')
-  // if (pay_form.is(":visible")) {
-  //   var stripe = Stripe('{{ stripe }}');
-  //   var elements = stripe.elements();
-  // }
+  // var stripe = Stripe('{{ stripe }}');
+  // var elements = stripe.elements();
+  var pay_form = $('#payment-form')
+  if (pay_form.is(":visible")) {
+    var stripe = Stripe('{{ stripe }}');
+    var elements = stripe.elements();
+  }
   var hideable_field = $('.hideable_field');
     
 

@@ -8,7 +8,9 @@ from django.urls import reverse
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.crypto import get_random_string
 
+from django.core import mail
 
 
 from .models import Customer,Merchant,CardTransactions, Transaction
@@ -24,6 +26,10 @@ def get_ref_id():
 	for i in range(8):
 		result += ''.join(random.choice(strings))
 	return result
+
+def get_activation_key():
+    return get_random_string(length=45)
+
 
 stripe.api_key = settings.STRIPE_KEY
 
@@ -89,7 +95,6 @@ class ProfileView(LoginRequiredMixin,generic.View):
             context['error'] = True
             return render(self.request,self.template_name,context=context)
         
-        
 
 
 class DashboardView(LoginRequiredMixin,generic.View):
@@ -115,7 +120,7 @@ class DashboardView(LoginRequiredMixin,generic.View):
             if form.is_valid():
                 pin = form.cleaned_data['pin']
                 benef = form.cleaned_data['beneficiary']
-                amount = int(form.cleaned_data['amounts'])
+                amount = int(form.cleaned_data['amount'])
                 merchant = self.request.POST.get('merchant')
                 item_qty = self.request.POST.get('quantity')
             
@@ -144,6 +149,10 @@ class DashboardView(LoginRequiredMixin,generic.View):
                             )
                         transaction.save()
                         return HttpResponseRedirect(reverse('success'))
+                else:
+                    context['error'] = True
+                    form.add_error('pin',ValidationError('Pin is incorrect'))
+                    return render(self.request,self.template_name,context)
             else:
                 context['error'] = True
                 return render(self.request,self.template_name,context)
@@ -203,62 +212,74 @@ class DashboardView(LoginRequiredMixin,generic.View):
 class FundWalletView(generic.View):
     template_name = 'core/payment.html'
     def get(self,*args,**kwargs):
-        
-        return render(self.request,self.template_name,{'stripe': settings.STRIPE_PK})
+        form = PinPurchaseForm()
+        context = {'stripe': settings.STRIPE_PK,'form':form}
+        return render(self.request,self.template_name,context=context)
 
     def post(self,request,*args,**kwargs):
-        amount = int(self.request.POST.get('amount'))
-        token = self.request.POST.get('stripeToken')
+        form = PinPurchaseForm(self.request.POST)
         user = self.request.user
         customer = get_object_or_404(Customer,user=user)
-        
-        try:
-            charge = stripe.Charge.create(
-                amount=amount*100,
-                currency='usd',
-                description='Example charged card',
-                source=token,
-                )
+        context = {'stripe': settings.STRIPE_PK,'form':form}
+        if form.is_valid():
+            amount = int(form.cleaned_data['amount'])
+            pin = int(form.cleaned_data['pin'])
+            token = self.request.POST.get('stripeToken')
+            user = self.request.user
+            customer = get_object_or_404(Customer,user=user)
+            if pin == customer.pin:
+                try:
+                    charge = stripe.Charge.create(
+                        amount=amount*100,
+                        currency='usd',
+                        description='Example charged card',
+                        source=token,
+                        )
 
-        except stripe.error.CardError as e:
-        # Since it's a decline, stripe.error.CardError will be caught
-            print('Status is: %s' % e.http_status)
-            print('Code is: %s' % e.code)
-            # param is '' in this case
-            print('Param is: %s' % e.param)
-            messages.warning(self.request,'%s' % e.user_message)
-            return self.get(*args,**kwargs)
-            # raise ValidationError(e)
-        except stripe.error.RateLimitError as e:
-        # Too many requests made to the API too quickly
-            raise ValidationError(e)
-        except stripe.error.InvalidRequestError as e:
-        # Invalid parameters were supplied to Stripe's API
-            raise ValidationError("there is an error at %s" %e.param)
-        except stripe.error.AuthenticationError as e:
-        # Authentication with Stripe's API failed
-        # (maybe you changed API keys recently)
-            print("Message is: Authentication with Stripe's API failed")
-        except stripe.error.APIConnectionError as e:
-        # Network communication with Stripe failed
-            print(e)
-            raise ValidationError(e)
-        except stripe.error.StripeError as e:
-        # Display a very generic error to the user, and maybe send
-        # yourself an email
-        #     messages.error(self.request,'Your PIN is incorrect!')
-            raise ValidationError(e)
-        except Exception as e:
-        # Something else happened, completely unrelated to Stripe
-            raise ValidationError(e)
+                except stripe.error.CardError as e:
+                # Since it's a decline, stripe.error.CardError will be caught
+                    print('Status is: %s' % e.http_status)
+                    print('Code is: %s' % e.code)
+                    # param is '' in this case
+                    print('Param is: %s' % e.param)
+                    messages.warning(self.request,'%s' % e.user_message)
+                    return self.get(*args,**kwargs)
+                    # raise ValidationError(e)
+                except stripe.error.RateLimitError as e:
+                # Too many requests made to the API too quickly
+                    raise ValidationError(e)
+                except stripe.error.InvalidRequestError as e:
+                # Invalid parameters were supplied to Stripe's API
+                    raise ValidationError("there is an error at %s" %e.param)
+                except stripe.error.AuthenticationError as e:
+                # Authentication with Stripe's API failed
+                # (maybe you changed API keys recently)
+                    print("Message is: Authentication with Stripe's API failed")
+                except stripe.error.APIConnectionError as e:
+                # Network communication with Stripe failed
+                    print(e)
+                    raise ValidationError(e)
+                except stripe.error.StripeError as e:
+                # Display a very generic error to the user, and maybe send
+                # yourself an email
+                #     messages.error(self.request,'Your PIN is incorrect!')
+                    raise ValidationError(e)
+                except Exception as e:
+                # Something else happened, completely unrelated to Stripe
+                    raise ValidationError(e)
 
-        user = get_object_or_404(User,username=self.request.user.username)
-        transaction = CardTransactions.objects.create(transaction_id=charge.id,user=user,successful=True,amount=amount)
-        transaction.save()
-        balance = customer.balance
-        customer.balance = balance + amount
-        customer.save()
-        return HttpResponseRedirect(reverse('success'))
+                user = get_object_or_404(User,username=self.request.user.username)
+                transaction = CardTransactions.objects.create(transaction_id=charge.id,user=user,successful=True,amount=amount)
+                transaction.save()
+                balance = customer.balance
+                customer.balance = balance + amount
+                customer.save()
+                return HttpResponseRedirect(reverse('success'))
+            else:
+                form.add_error('pin',ValidationError('Incorrect PIN! Retry'))
+                return render(self.request,self.template_name,context)
+        else:
+            return render(self.request,self.template_name,context)
 
 
 
@@ -377,14 +398,39 @@ class IndexView(generic.View):
                 username = form.cleaned_data['username']
                 password = form.cleaned_data['password1']
                 phone = form.cleaned_data['phone']
+                email = form.cleaned_data['email']
+                activation_key = get_activation_key()
                 form.save()
-                new_user = authenticate(username=username,password=password)  
-                customer = Customer.objects.create(user=new_user,phone=phone)
+                new_user = authenticate(username=username,password=password) 
+                user = User.objects.get(username=username)
+                customer = Customer.objects.get(user=user)
+                customer.activation_key = activation_key
                 customer.save()
-                login(self.request,new_user)
-                return HttpResponseRedirect('dashboard')
+                subject = 'Zeedah Account Verification'
+                body = f'Hi {username} \n Please click on the link below to confirm your registration \n http://localhost:8000/activate/{activation_key}'
+                sender = 'zeedah@gmail.com'
+                with mail.get_connection() as connection:
+                    mail.EmailMessage(
+                        subject, body, sender, [email],
+                        connection=connection,
+                    ).send()
+                    
+                messages.success(self.request,'Kindly Check Your Email for link to activate your account')
+                return render(self.request,self.template_name,context=context)
             else:
                 context = {'form':form,'disp':True,'errors':form.errors}
                 return render(self.request,self.template_name,context=context)
         return render(self.request,self.template_name,context=context)
 
+def activate(request,activation_key):
+    customer = get_object_or_404(Customer,activation_key=activation_key)
+    if customer.user.is_active == True:
+        return HttpResponseRedirect(reverse('login_page'))
+    else:    
+        if request.method == 'POST':
+            user = customer.user
+            user.is_active = True
+            user.save()
+            customer.save()
+            return HttpResponseRedirect(reverse('login_page'))
+    return render(request,'core/activation.html')

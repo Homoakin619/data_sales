@@ -33,6 +33,7 @@ STRIPE_KEY =env('STRIPE_KEY')
 STRIPE_PK = env('STRIPE_PK')
 
 LOGIN_URL = 'login_page'
+LOGIN_REDIRECT_URL = 'dashboard'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -60,6 +61,9 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_heroku',
     'core',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +76,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+SITE_ID = 1
+
 
 ROOT_URLCONF = 'zeedah.urls'
 
@@ -214,6 +221,15 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
 
 # Amazon s3 aws cloud bucket settings

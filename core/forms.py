@@ -5,14 +5,19 @@ from  django.core.exceptions import ValidationError
 from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate
 
+from django.contrib.auth import authenticate
+
 import json
+from validate_email import validate_email as validator
 
 
 from .models import Customer,Merchant
 
+
+
 class LoginForm(forms.Form):
-    username = forms.CharField(label='Username',widget=forms.TextInput(attrs={"class":"form-control", "id":"floatingInput", "placeholder":"username", "autofocus":True }))
-    password = forms.CharField(label='Password',widget=forms.PasswordInput(attrs={"class":"form-control", "id":"floatingPassword", "placeholder":"Password"}))
+    username = forms.CharField(label='Username',widget=forms.TextInput(attrs={"class":"form-control border border-primary", "id":"floatingInput", "placeholder":"username", "autofocus":True }))
+    password = forms.CharField(label='Password',widget=forms.PasswordInput(attrs={"class":"form-control border border-primary", "id":"floatingPassword", "placeholder":"Password"}))
 
     def clean_username(self):
         username = self.cleaned_data['username']
@@ -24,14 +29,20 @@ class LoginForm(forms.Form):
         if not query:
             raise ValidationError('Username does not exist')
         return username
+    def clean(self):
+        username = self.cleaned_data['username']
+        password= self.cleaned_data['password']
+        if not authenticate(username=username,password=password):
+            raise ValidationError('Details do not match!')
+        return self.cleaned_data
         
 
 class CustomerForm(UserCreationForm):
-    username = forms.CharField(label='Username',widget=forms.TextInput(attrs={"class":"form-control", "id":"floatingInput", "placeholder":"username", "autofocus":True }))
-    email = forms.EmailField(label='Email',widget=forms.EmailInput(attrs={"class":"form-control", "id":"floatingInput", "placeholder":"name@example.com"}))
-    password1= forms.CharField(label='Password',widget=forms.PasswordInput(attrs={"class":"form-control", "id":"floatingPassword", "placeholder":"Password"}))
-    password2 = forms.CharField(label='Confirm Password',widget=forms.PasswordInput(attrs={"class":"form-control", "id":"floatingPassword1", "placeholder":"Confirm Password"}))
-    phone = forms.IntegerField(label='Phone',widget=forms.NumberInput(attrs={"class":"form-control", "id":"floatingInput", "placeholder":"Phone"}))
+    username = forms.CharField(label='Username',widget=forms.TextInput(attrs={"class":"form-control border border-primary", "id":"floatingInput", "placeholder":"username", "autofocus":True }))
+    email = forms.EmailField(label='Email',widget=forms.EmailInput(attrs={"class":"form-control border border-primary", "id":"floatingInput", "placeholder":"name@example.com"}))
+    password1= forms.CharField(label='Password',widget=forms.PasswordInput(attrs={"class":"form-control border border-primary", "id":"floatingPassword", "placeholder":"Password"}))
+    password2 = forms.CharField(label='Confirm Password',widget=forms.PasswordInput(attrs={"class":"form-control border border-primary", "id":"floatingPassword1", "placeholder":"Confirm Password"}))
+    phone = forms.IntegerField(label='Phone',widget=forms.NumberInput(attrs={"class":"form-control border border-primary", "id":"floatingInput border border-secondary", "placeholder":"Phone"}))
 
     def clean_username(self):
         username = self.cleaned_data['username'].lower()
@@ -45,7 +56,16 @@ class CustomerForm(UserCreationForm):
         new = User.objects.filter(email=email)
         if new.count():
             raise ValidationError('Email Exists!')
+        if validator(email) is not True:
+            raise ValidationError('Email does not exist! Enter a valid email')
         return email
+    
+    def clean_phone(self):
+        phone = self.cleaned_data['phone']
+        new = Customer.objects.filter(phone=phone)
+        if new.count():
+            raise ValidationError('Phone Exists!')
+        return phone
 
     def clean_password2(self):
         password1= self.cleaned_data['password1']
@@ -58,8 +78,12 @@ class CustomerForm(UserCreationForm):
     def save(self, commit=True):
         user = User.objects.create_user(self.cleaned_data['username'],self.cleaned_data['email'],self.cleaned_data['password1'])
         user.is_staff = False
+        user.is_active = False
         group = Group.objects.get(name='customers')
         user.groups.add(group)
+        customer = Customer.objects.create(user=user,phone=self.cleaned_data['phone'])
+        customer.save()
+        user.save()
         return user
 
 class MerchantForm(forms.ModelForm):
@@ -101,9 +125,9 @@ class ChangePinForm(forms.Form):
         return pin
         
 class PinPurchaseForm(forms.Form):
-    pin = forms.IntegerField(widget=forms.NumberInput(attrs={"type":"password", "class":"form-control","id":"pin","name":"pin","placeholder":"Enter PIN"}))
+    pin = forms.IntegerField(widget=forms.NumberInput(attrs={"type":"password", "class":"form-control border border-secondary","id":"pin","name":"pin","placeholder":"Enter PIN"}))
     beneficiary = forms.IntegerField(required=False,widget=forms.NumberInput(attrs={"class":"form-control","name":"beneficiary","placeholder":"Enter Beneficiary"}))
-    amounts = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','hidden':True}))
+    amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control border border-secondary','placeholder':'Enter Amount To Fund'}))
 
     def clean_pin(self):
         pin = str(self.cleaned_data['pin'])

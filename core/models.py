@@ -78,6 +78,7 @@ class Customer(models.Model):
 	phone = models.BigIntegerField(unique=True)
 	balance = models.FloatField(default=00.00)
 	pin = models.IntegerField(blank=True,null=True)
+	activation_key = models.CharField(null=True,blank=True,max_length=100)
 	
 
 	def __str__(self):
