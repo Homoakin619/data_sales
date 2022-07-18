@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-# from core.admin import admin_site
+from flask import request
+from core.admin import admin_site
 
-admin.site.site_header = 'Zeedah Data Admin'
-admin.site.site_title = 'Zeedah Data Admin'
-admin.site.index_title = 'Zeedah Data Administration'
-admin.site.subtitle = ''
-admin.empty_value_display = ''
+# admin.site.site_header = 'Zeedah Data Admin'
+# admin.site.site_title = 'Zeedah Data Admin'
+# admin.site.index_title = 'Zeedah Data Administration'
+# print(type(admin.site.each_context()) )
+# admin.empty_value_display = '']
+# admin.site = admin_site
 
 urlpatterns = [
     # path('admin/', admin_site.urls),

@@ -1,1 +1,19 @@
-[17/Jul/2022 23:37:24] DEBUG [django.db.backends.schema:179] ALTER TABLE "core_merchant" ALTER COLUMN "data_price" TYPE jsonb USING "data_price"::jsonb; (params [])
+[18/Jul/2022 01:36:05] INFO [django.server:187] "GET /admin/auth/user/ HTTP/1.1" 200 11491
+[18/Jul/2022 01:36:05] INFO [django.server:187] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1658064925.0242171
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1658064925.0292206
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1658064925.0222158
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1658064925.027219
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\utils.py first seen with mtime 1658064925.0152159
+[18/Jul/2022 01:36:05] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1658064925.8731296
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\conf\locale\en\__init__.py first seen with mtime 1658064918.2147696
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\conf\locale\en\formats.py first seen with mtime 1658064918.21577
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\tzdata\zoneinfo\__init__.py first seen with mtime 1658064508.5803022
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\template\context_processors.py first seen with mtime 1658064926.8184311
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1658064921.3435757
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Users\Hayeenday\AppData\Roaming\Python\Python38\site-packages\tzdata\__init__.py first seen with mtime 1658064508.3821204
+[18/Jul/2022 01:36:07] DEBUG [django.utils.autoreload:394] File C:\Program Files\Python\Python38\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1658064925.010208
+[18/Jul/2022 01:36:11] INFO [django.server:187] "POST /admin/auth/user/ HTTP/1.1" 200 7292
+[18/Jul/2022 01:36:38] INFO [django.server:187] "GET /admin/auth/user/ HTTP/1.1" 200 11491
+[18/Jul/2022 01:36:38] INFO [django.server:187] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[18/Jul/2022 01:36:46] INFO [django.server:187] "POST /admin/auth/user/ HTTP/1.1" 200 7292
