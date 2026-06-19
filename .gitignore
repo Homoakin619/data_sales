@@ -2,6 +2,4 @@
 txt-str.py
 *.pyc
 mysite.log
-temp_auto_push.bat
-temp_interactive_push.bat
 .gitignore
